@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Style Example</title>
+        <script type="text/ecmascript">
+            function showTip()
+            {
+			     var oEvent=window.event;
+                var oDiv = document.getElementById("divTip1");
+                oDiv.style.visibility = "visible";
+                oDiv.style.left = oEvent.clientX + 5;
+                oDiv.style.top = oEvent.clientY + 5;
+            }
+            function hideTip()
+            {
+			     var oEvent=window.event;
+                var oDiv = document.getElementById("divTip1");
+                oDiv.style.visibility = "hidden";
+            }
+        </script>
+    </head>
+    <body>
+       <p>
+            Move your mouse over the red square.
+        </p>
+
+        <div    id="div1"      style="background-color: red; height: 50px; width:50px"
+            onmouseover="showTip()" onmouseout="hideTip()">
+        </div>
+		<br/>
+		<br/>
+	 <div         id="div2"         style="background-color: red; height: 50px; width:50px"
+            onmouseover="showTip()" onmouseout="hideTip()">
+        </div>
+      
+ <div
+            id="divTip1"
+            style="background-color: Yellow; position:absolute;visibility:hidden;padding:5px">
+
+            <span  style="font-weight:bold">
+                Custom Tooltip
+            </span>
+
+            <br/>
+                More details can go here.
+
+        </div>
+    </body>
+</html>

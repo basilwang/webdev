@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+	<script>
+		function createTable()
+		{
+			var oTable=document.createElement("table");
+			oTable.border="1px";
+			oTable.width="60%";
+			oTable.cellspacing="0px";
+			oTable.cellpadding="0px";
+
+			var oTbody=document.createElement("tbody");
+			oTable.appendChild(oTbody);
+			
+			//create the first row
+			oTable.insertRow(0);
+			oTable.rows[0].insertCell(0);
+			oTable.rows[0].cells[0].appendChild(document.createTextNode("Cell1,1"));
+			//错误
+			//oTable.rows[0].cells[0].appendChild("Cell1,1");
+			oTable.rows[0].insertCell(1);
+             oTable.rows[0].cells[1].appendChild(document.createTextNode("Cell1,2"));
+
+
+            //create the second row
+			oTable.insertRow(1);
+			oTable.rows[1].insertCell(0);
+			oTable.rows[1].cells[0].appendChild(document.createTextNode("Cell2,1"));
+			oTable.rows[1].insertCell(1);
+             oTable.rows[1].cells[1].appendChild(document.createTextNode("Cell2,2"));
+
+			 document.body.appendChild(oTable);
+
+
+		}
+	</script>
+ </HEAD>
+
+ <BODY >
+  <h3>利用HTML DOM的rows、insertRows、insertCell等属性和方法创建Table</h3>
+  <input type="button" value="创建Table" onclick="createTable()"/>
+ </BODY>
+</HTML>

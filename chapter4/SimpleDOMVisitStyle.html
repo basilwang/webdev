@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <style>
+	#div3{
+		width:200px;
+		height:200px;
+		background-color:#eee;
+	}
+	#div4{
+		width:300px;
+		height:300px;
+		background-color:#ddd;
+	}
+  </style>
+  <script>
+     //DOM操作样式
+	 function changeCss()
+	 {
+		var div1=document.getElementById("div1");
+		div1.style.border="1px solid red";
+		div1.style.width="200px"
+		div1.style.height="100px";
+
+	 }
+	 //内联样式值的显示可以通过节点的style对象访问
+     function showInlineCss()
+	 {
+		var div2 = document.getElementById("div2");
+		alert("宽度:"+div2.style.width+"\n高度:"+div2.style.height+"\n背景色:"+div2.style.backgroundColor);
+	 }
+	 //<style/>块和外部文件的Css值的显示通过如下方式显示
+	 function showStyleCss()
+	 {  
+       var oCssRules =document.styleSheets[0].cssRules ||document.styleSheets[0].rules;
+	   
+	   alert("宽度:"+oCssRules[1].style.width+"\n高度:"+oCssRules[1].style.height+"\n背景色:"+oCssRules[1].style.backgroundColor);
+	
+	 }
+  </script>
+ </HEAD>
+
+ <BODY>
+     
+     <div id="div1" >div1</div>
+	 <input type="button" onclick="changeCss()" value="更改样式值"/>
+    
+	 <div id="div2" style="width:100px;height:100px;background-color:#ccc;">div2</div>
+	 <input type="button" onclick="showInlineCss()" value="显示内联样式值"/>
+
+	 <div id="div3">div3</div>
+	 <input type="button" onclick="showStyleCss()" value="显示Style样式值"/>
+ </BODY>
+</HTML>

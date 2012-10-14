@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 strict//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script>
+		function doclick1()
+		{
+			alert('javascript事件分配方式！');
+		}
+		function doclick4()
+		{
+			alert("doclick4 ");
+		}
+		function doclick5()
+		{
+			alert("doclick5");
+		}
+		window.onload=function()
+		{
+			var  btn1= document.getElementById("btn1");
+			var  btn3= document.getElementById("btn3");
+			btn1.onclick=doclick1;//ie，ff，其他浏览器均可以使用该分配事件函数的方法
+			btn3.addEventListener("click",doclick4,false);//只适合ff
+			btn3.addEventListener("click",doclick5,false);
+			
+		};
+  </script>
+ </HEAD>
+
+ <BODY>
+	 <input type="button" id="btn0" name="bnt0" value="html事件分配"  onclick="alert('这是html事件分配方式！')"/>
+	  <input type="button" id="btn1" name="btn1" value="javascript事件分配"/>
+	  <input type="button" id="btn3" name="btn3" value="DOM-addEventListener方法"/>
+
+ </BODY>
+</HTML>

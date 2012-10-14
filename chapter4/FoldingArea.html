@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Toggle Example</title>
+		<style>
+			.tabTitle
+			{
+				background-color:Blue; 
+				color:white;
+				font-weight:bold;
+				padding:10px;
+				cursor:pointer
+			}
+			.tabContent
+			{
+				border:3px solid blue; 
+				height:100px; 
+				padding:10px
+			}
+		</style>
+        <script type="text/ecmascript">
+            function toggle(sDivId)
+            {
+                var oDiv = document.getElementById(sDivId);
+                /*oDiv.style.display	 =
+				      (oDiv.style.display == "none") ? "block" : "none";*/
+			    if(oDiv.style.display=="none")
+				    oDiv.style.display="block";
+				else
+				    oDiv.style.display="none";
+				//oDiv.style.visibility	 = (oDiv.style.visibility == "hidden") ? "visible" : "hidden";
+            }
+        </script>
+    </head>
+    <body>
+        <h3 class="tabTitle"   onclick="toggle('divContent1')">
+            Click here.
+        </h3>
+        <div id="divContent1"  class="tabContent">
+            This is some content to show and hide.
+        </div>
+                     
+        <h3  class="tabTitle"  onclick="toggle('divContent2')">
+            Click here
+        </h3>
+        <div  id="divContent2"  class="tabContent">
+            This is some content to show and hide.
+        </div>
+    </body>
+</html>

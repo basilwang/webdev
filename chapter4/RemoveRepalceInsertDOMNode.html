@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+	<script>
+		function fnRemove()
+		{
+			var i=prompt("您要删除第几个节点？");
+			var li=document.getElementsByTagName("li")[i-1];
+			li.parentNode.removeChild(li);
+		}
+		function fnReplace()
+		{
+			var newli=document.createElement("li");
+			var text=document.createTextNode("new list！");
+			newli.appendChild(text);
+			var i=prompt("您要更新第几个节点？");
+			var oldli=document.getElementsByTagName("li")[i-1];
+			oldli.parentNode.replaceChild(newli,oldli);
+		}
+        function fnInsert()
+		{
+			var newli=document.createElement("li");
+			var text=document.createTextNode("insert new list！");
+			newli.appendChild(text);
+			var i=prompt("您要插入到第几个节点之前？");
+			var oldli=document.getElementsByTagName("li")[i-1];
+			oldli.parentNode.insertBefore(newli,oldli);
+		}
+
+	</script>
+ </HEAD>
+
+ <BODY>
+	<ul id="ul1">
+		<li>list1</li>
+		<li>list2</li>
+		<li>list3</li>
+		<li>list4</li>
+		<li>list5</li>
+    </ul>
+	<input type="button" value="删除节点" onclick="fnRemove()"/>
+	<input type="button" value="更换节点" onclick="fnReplace()"/>
+	<input type="button" value="插入节点" onclick="fnInsert()"/>
+    
+
+ </BODY>
+</HTML>

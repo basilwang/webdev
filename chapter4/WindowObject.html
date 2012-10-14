@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <style>
+	div{
+	  background-color:#ccc; 
+	  border:1px solid teal;
+	  margin-bottom:20px;
+	  
+}
+  </style>
+  <script>
+    //打开一个新窗口
+	function OpenWindow(url)
+	{
+		window.open(url,null,
+		"height=400,width=600,status=yes,toolbar=no,menubar=no,location=no");
+		
+	}
+	function test()
+	{
+		alert("aaa");
+	}
+	function OpenModelDialog()
+	{
+		var wincol=window.showModalDialog("color_forModalDialog.html","wincolor","dialogHeight:167px;dialogWidth:407px;dialogTop:288px;dialogLeft:564px;center: Yes;help:Yes;resizable:Yes;status:Yes;");
+		document.getElementById("txtcolor2").value=wincol;
+        alert(document.getElementById("txtcolor2").value);
+             
+	}
+	function OpenModelDialogWithPara()
+	{
+		var arr = new Array();
+        var username=document.getElementById("txtName").value;
+		var sex =document.getElementsByName("radSex");
+		var sexValue;
+		for(var i=0;i<sex.length;i++)
+		{
+				if(sex[i].checked)
+                {
+					sexValue=sex[i].value;
+					break;
+				}
+		}
+		arr[0]=username;
+		arr[1]=sexValue;
+		wincol=window.showModalDialog("color_forModalDialogWithPara.html",arr,"dialogHeight:167px;dialogWidth:407px;dialogTop:288px;dialogLeft:564px;center: Yes;help:Yes;resizable:Yes;status:Yes;");
+	}
+  </script>
+ </HEAD>
+
+ <BODY>
+ <div>
+   1、利用window.open方法打开一个窗口
+	<input type="button" id="btnOpen" onclick="OpenWindow('sample.html');" value="打开新窗口"/>
+ </div>
+ <div>
+  2、从用window.open打开的窗口
+  【返回的数据】<input type="text" name="txtcolor1" id="txtcolor1" size="20"/>
+  <input type="button" value="选择颜色" onclick="OpenWindow('color_forOpen.html');"/>
+ </div>
+ <div>
+	3、利用window.showModalDialog方法打开一个窗口(不带参数)
+	【返回的数据】<input type="text" name="txtcolor2" id="txtcolor2" size="20"/>
+	<input type="button" id="btnOpen" onclick="OpenModelDialog();" value="打开新窗口"/>
+ </div>
+ <div>
+	4、利用window.showModalDialog方法打开一个窗口（带参数）
+	【传递到子窗口的数据：】
+	姓名：<input type="text" name="txtName" id="txtName" size="20"/>
+	性别：男
+	<input type="radio" name="radSex" id="radMan" value="Men"/>
+	女
+	<input type="radio" name="radSex" id="radWomen" value="Women"/>
+	<input type="button" id="btnOpen2" onclick="OpenModelDialogWithPara();" value="打开新窗口"/>
+ </div>
+ </BODY>
+</HTML>

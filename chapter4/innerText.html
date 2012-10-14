@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+ </HEAD>
+ <script>
+	function changeDivTextByInnerText()
+	{
+	 document.getElementById("div1").innerText="hell world(by innerText)!";
+	}
+	function changeDivTextByDOM()
+	{
+		  
+	    document.getElementById("div1")
+		 .appendChild(document.createTextNode("hello world!(by dom)"));
+	}
+ </script>
+ <BODY>
+
+	<hr/>
+	<h2>第二个例子：分别用DOM和innerText来实现更改div内容</h2>
+	<div id="div1" style="width:400px;height:100px;border:1px solid red;"></div>
+	<input type="button" onclick="changeDivTextByDOM()" value="chanage div text by dom"/>
+	<input type="button" onclick="changeDivTextByInnerText()" value="chanage div text by innerText"/>
+	
+ </BODY>
+</HTML>

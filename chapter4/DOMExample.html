@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <style>
+	#div1{width:200px;height:200px;border:1px solid red;}
+	#btn1{display:block;}
+  </style>
+ <script>
+    var flag =1;
+	function changecolor()
+	{
+		document.getElementById("div1").style.backgroundColor="yellow";
+	}
+	function hideshow()
+	{
+		if(flag==1)
+		{
+			document.getElementById("img1").style.display="none";
+			document.getElementById("btn1").value="ÏÔÊ¾";
+			flag=0;
+		}
+		else if(flag==0)
+		{
+			document.getElementById("img1").style.display="block";
+			document.getElementById("btn1").value="Òþ²Ø";
+			flag=1;
+		}
+		
+	}
+  </script>
+ </HEAD>
+
+ <BODY>
+	<div id="div1" onclick="changecolor()"></div>
+    <br/>
+	<br/>
+	<input type="button" id="btn1" value="Òþ²Ø" onclick="hideshow()"/>
+	<img id="img1" src="simple_smile.gif"/>
+	
+ </BODY>
+</HTML>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+		<style>
+			div{width:400px;height:200px;border:1px solid black;}
+		</style>
+		<script>
+			function chanageByDOM()
+			{
+				var oString=document.createElement("strong");
+				oString.appendChild(document.createTextNode("hello"));
+				var oEm=document.createElement("em");
+				oEm.appendChild(document.createTextNode("world"));
+				var div1=document.getElementById("div1");
+				div1.appendChild(oString);
+				div1.appendChild(document.createTextNode("   "));
+				div1.appendChild(oEm);
+				
+			}
+			function changeByinnerHTML()
+			{
+				//Note:innerHTML中设置的是HTML字符串；注意类似空格的使用；
+				document.getElementById("div1")
+				.innerHTML="<strong>hello  </strong><em>world</em>";
+				
+			}
+		</script>
+ </HEAD>
+
+ <BODY>
+  <div id="div1"></div>
+  <input type="button" id="btn1" value="利用DOM进行更改" onclick="chanageByDOM()"/>
+  <input type="button" id="btn2" value="利用innerHTML进行更改" onclick="changeByinnerHTML()"/>
+ </BODY>
+</HTML>

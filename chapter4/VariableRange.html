@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script>
+  	var i=20;
+	document.write("<br/>全局范围变量值为："+i);
+    function inscope()
+	{
+        alert(i);
+		i+=1;
+		var j=1;
+	}
+	function outofscope()
+	{
+         alert(j);
+	}
+  </script>
+ </HEAD>
+
+ <BODY>
+ <input type="button" onclick="inscope();" value="测试全局变量">
+ <input type="button" onclick="outofscope();" value="测试局部变量">
+ </BODY>
+</HTML>

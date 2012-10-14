@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script>
+    var i=5;
+	function fnAppend()
+	{
+		var list = document.createElement("li");
+		var listText=document.createTextNode("List Node "+i);
+		list.appendChild(listText);
+		var oList=document.getElementById("oList");
+		oList.appendChild(list);
+        i++;
+	}
+  </script>
+ </HEAD>
+
+ <BODY>
+  <UL ID = "oList">
+	<LI>List node 1</li>
+	<LI>List node 2</li>
+	<LI>List node 3</li>
+	<LI>List node 4</li>
+</UL>
+
+<INPUT TYPE="button" VALUE="Append Child"  onclick="fnAppend()">
+</BODY>
+ </BODY>
+</HTML>

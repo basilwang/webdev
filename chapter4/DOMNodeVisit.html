@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+   <style>
+    
+	  #intro{width:200px;height:50px;border:1px solid blue;}
+   </style>
+  <script>
+	function getChildNode()
+	{
+	 
+		var div1=document.getElementById("div1");
+		var div1Nodes=div1.childNodes;
+		var str="";
+		for(var i=0;i<div1Nodes.length;i++)
+		{
+			str+="第"+i+"个节点的nodeName为: "+div1Nodes[i].nodeName+"   ";
+            if(div1Nodes[i].nodeType==3)//文本节点
+			{
+				str+="nodeType:"+div1Nodes[i].nodeType+" nodeValue: "+div1Nodes[i].nodeValue+"\n";
+			}
+			else if(div1Nodes[i].nodeType==1)//元素节点
+			{
+			  str+="nodeType:"+div1Nodes[i].nodeType+" 其内文本节点"+"nodeValue:"+div1Nodes[i].firstChild.nodeValue+"\n";
+			  
+			}
+		}
+        alert(str);
+	}
+	function getSecondChildNode()
+	{
+	  	var d1=document.getElementById("div1").childNodes[0];
+		alert(d1.nodeName);
+
+	}
+
+	function getPValue()
+	{
+			var p1=document.getElementById("intro");
+			var v= p1.childNodes[0].nodeValue;
+			
+			alert("该段落P的nodeValue为：" +v);
+			
+	}
+
+  </script>
+ </HEAD>
+
+ <BODY>
+	<div id="div1">
+		<p id="p1">欢迎！</p> 
+		<span id="sp1">Welcome！</span></div>     
+		
+
+	<input type="button" value="First" id="btn1" onclick="getChildNode()"/>
+	<input type="button" value="Second" id="btn1" onclick="getSecondChildNode()"/>
+	
+   <p id="intro">Hello World!</p>
+   <input type="button" value="getValue" onclick="getPValue()"/>
+	
+ </BODY>
+</HTML>

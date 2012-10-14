@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script>
+		function showEvent(e)
+		{
+			
+			 //var e = window.event;//ff下该行将会报错的
+			  alert("被单击的按钮ID为："+e.target.id);
+
+		}
+  </script>
+ </HEAD>
+
+ <BODY>
+	<input type="button" id="btn1" value="hihi！" onclick="showEvent(event)"/>
+ </BODY>
+</HTML>

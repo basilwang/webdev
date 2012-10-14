@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script>
+	function createTable()
+	{
+		var oTable=document.createElement("table");
+		oTable.setAttribute("border","1px");
+		oTable.setAttribute("width","60%");
+		oTable.setAttribute("cellspacing","0px");
+		oTable.setAttribute("cellpadding","0px");
+
+		var oTbody=document.createElement("tbody");
+		oTable.appendChild(oTbody);
+		//create the first row
+		var oTr1=document.createElement("tr");
+		oTbody.appendChild(oTr1);
+		var oTd11=document.createElement("td");
+		oTd11.appendChild(document.createTextNode("Cell1,1"));
+		oTr1.appendChild(oTd11);
+		var oTd12=document.createElement("td");
+		oTd12.appendChild(document.createTextNode("Cell1,2"));
+		oTr1.appendChild(oTd12);
+		//create the second row;
+		var oTr2=document.createElement("tr");
+		oTbody.appendChild(oTr2);
+		var oTd21=document.createElement("td");
+		oTd21.appendChild(document.createTextNode("Cell2,1"));
+		oTr2.appendChild(oTd21);
+		var oTd22=document.createElement("td");
+		oTd22.appendChild(document.createTextNode("Cell1,2"));
+		oTr2.appendChild(oTd22);
+
+		document.body.appendChild(oTable);
+
+	}
+  </script>
+ </HEAD>
+
+ <BODY onload="createTable()">
+  
+ </BODY>
+</HTML>

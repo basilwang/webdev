@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script>
+		function showEvent(o)
+		{
+		     alert(o.id);
+			 alert(o.value);
+			 o.value="hello world";
+		
+			/* var e = window.event;
+			 var srcID=e.srcElement.id;
+			 var srcValue=e.srcElement.value;
+			 alert("被点击的对象的ID为："+srcID);
+			 //alert("通过this取得被点击的对象的ID为："+o.id);
+			alert("被点击的对象的Value值为："+srcValue);
+			e.srcElement.value="hello world";*/
+			
+
+
+		}
+  </script>
+ </HEAD>
+
+ <BODY>
+	<input type="button" id="btn1" value="hihi！" onclick="showEvent(this)"/>
+ </BODY>
+</HTML>
