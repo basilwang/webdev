@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <style>
+	#divouter{ width:400px;height:400px;border:2px solid red;}
+	#divinner{ width:300px;height:300px;border:2px solid blue;}
+
+  </style>
+	<script>
+	 	function fn1()
+		{
+			alert('click sdie');
+		}
+
+		function fn2()
+		{
+		   alert('click sdie');
+		   event.returnValue=false;//取消事件的默认动作
+	   }
+	   function fn3()
+	   {
+			alert('click sdie');
+			event.cancelBubble=true;//停止事件向上冒泡
+	   }
+	   function fn4()
+	   {
+			alert('click sdie');
+			event.returnValue=false;//取消事件的默认动作
+			event.cancelBubble=true;//停止事件向上冒泡
+	   }
+	</script>
+ </HEAD>
+
+ <BODY>
+ <!--点击 第一个链接：alert('click sdie')-》alert('this is the inner div')-》alert('this is the outer div')  -》导航到山经网站
+ 点击第二个链接：alert('click sdie')-》alert('this is the inner div')-》alert('this is the outer div')  
+ 点击第三个链接：alert('click sdie')-》导航到山经网站
+ 点击第四个链接：alert('click sdie')
+ -->
+  <div id="divouter" onclick="alert('this is the outer div')">
+		<div id="divinner" onclick="alert('this is the inner div')">
+				<a href="http://www.sdie.edu.cn"  target="_blank" onclick="fn1()">山经</a>
+					<a href="http://www.sdie.edu.cn"  target="_blank" onclick="fn2()">山经</a>
+						<a href="http://www.sdie.edu.cn"  target="_blank" onclick="fn3()">山经</a>
+							<a href="http://www.sdie.edu.cn"  target="_blank" onclick="fn4()">山经</a>
+			
+		</div>
+  </div>
+
+ </BODY>
+</HTML>

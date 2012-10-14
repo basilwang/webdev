@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+     <script>
+		function  okchoose()
+		{
+          var selColor=document.getElementById("selColor");
+		  var color=selColor.options[selColor.selectedIndex].text;
+	      window.returnValue="您选择的颜色为："+color; //此行是关键
+          window.close();
+
+		}
+	 </script>
+ </HEAD>
+ <BODY>
+  <span>请选择您喜欢的颜色</span>
+  <select name="selColor" id="selColor">
+	<option value="none" selectd>未选</option>
+	<option value="red">红色</option>
+	<option value="green">绿色</option>
+	<option value="blue">蓝色</option>
+	<option value="black">黑色</option>
+	<option value="white">白色</option>
+    
+  </select>
+  <input type="button" value="确定" onclick="okchoose();"/>
+ </BODY>
+</HTML>

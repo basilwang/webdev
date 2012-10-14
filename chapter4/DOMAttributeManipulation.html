@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+	<script>
+		function showattribute()
+		{
+			var img=document.getElementById("img1");
+			var str ="id为："+img.getAttribute("id")+"\n"+"src："+img.getAttribute("src")+"\n"+"border:"+img.getAttribute("border");
+			alert(str);
+		}
+		function setattribute1()
+		{
+			var img=document.getElementById("img1");
+			img.setAttribute("src","../images/eg_smile.gif");
+			img.setAttribute("border","2");
+		}
+		function setattribute2()
+		{
+			var img=document.getElementById("img1");
+		    alert(img.src);
+			img.src="../images/eg_smile.gif";
+			img.border="2px";
+		}
+	</script>
+ </HEAD>
+
+ <BODY>
+  <img src="../images/bill.jpg" alt="比尔盖茨的照片" border=0 id="img1"/>
+  <br/>
+  <input type="button" value="显示img的属性设置" onclick="showattribute()"/>
+<input type="button" value="设置新属性值-核心DOM" onclick="setattribute1()"/>
+<input type="button" value="设置新属性值-HTMLDOM" onclick="setattribute2()"/>
+
+
+ </BODY>
+</HTML>

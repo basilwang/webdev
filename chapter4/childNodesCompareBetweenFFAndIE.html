@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <style>
+	#pn1{border:1px solid red;}
+	#pn2{border:1px solid blue;}
+
+  </style>
+ </HEAD>
+
+ <BODY>
+  <script type="text/javascript">
+    //FF下和IE下对childNodes的处理不同；
+	//FF下会将元素之间的回车和空格作为一个文本节点,因此本例中FF下的childNodes的length为7而IE下则为3；
+	function view(){
+		var pn1=document.getElementById("pn1");
+		var pn2=document.getElementById("pn2");
+
+		var childs1=pn1.childNodes;
+		var childs2=pn2.childNodes;
+		alert("length of pn1: "+childs1.length+"--length of pn2: "+childs2.length);
+	}
+</script>
+	<input type="button" value="查看节点长度" onclick="view();" />
+	<div id="pn1">
+	 <div>first</div> 
+	 <div>second</div> 
+	 <div>third</div>
+   </div>
+<div id="pn2"><div>first</div><div>second</div><div>third</div></div>
+
+ </BODY>
+</HTML>

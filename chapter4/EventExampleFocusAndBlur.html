@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <style>
+	 #txtusername {border:1px solid black; }
+	  #txtpwd {border:1px solid black; }
+  </style>
+
+  <script>	
+		function check()
+		{
+		     var txtusername = document.getElementById("txtusername");
+			 var str = txtusername.value;
+			 if(str.length<10)
+				{
+					txtusername.style.border="1px solid red";
+				}
+		}
+      function restore()
+	  {
+	    var txtusername = document.getElementById("txtusername");
+		txtusername.style.border="1px solid black";
+	  }
+
+  </script>
+ </HEAD>
+
+ <BODY>
+    <input type="text" id="txtusername" name="txtusername" onblur="check()"  onfocus="restore();"/>
+	<input type="text" id="txtpwd" name="txtpwd" />
+  
+ </BODY>
+</HTML>

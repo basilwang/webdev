@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+   <script>
+	  function receive()
+	  {
+		   var para;
+			para = window.dialogArguments;
+			document.getElementById("txtUserName").value=para[0];
+			document.getElementById("txtSex").value=para[1];
+	}
+   </script>
+ </HEAD>
+ <BODY onload="receive();">
+  <span>从父窗口传递过来的参数是:</span>
+  <div>
+	姓名：<input type="text" id="txtUserName"/>
+	<br/>
+	性别：<input type="text" id="txtSex"/>
+  <div>
+    
+ </BODY>
+</HTML>
