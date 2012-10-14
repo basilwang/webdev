@@ -1,0 +1,51 @@
+	 *{margin:0px;padding:0px;}
+	.infotitle{
+		background:#f6fbfe;
+		border:#81bbcd 1px solid;
+		width:350px;
+		height:200px;
+		
+	}
+	.infotitle div
+	{
+		width:320px;
+		margin-left:10px;
+	}
+	.infotitle h2
+	{
+		width:350px;
+		height:26px;
+		background:url(../images/info_columntlh2bg.gif) repeated-x left top;
+	}
+	.infotitle p
+	{
+		float:left;
+		padding-left:12px;
+		width:160px;
+		height:26px;
+		line-height:26px;
+		font-size:12px;
+		font-weight:bold;
+
+	}
+	.infotitle span
+	{
+		float:right;
+		width:60px;
+		height:26px;
+		line-height:26px;
+		text-align:center;
+	}
+	.infotitle a
+	{
+		color:#003163;
+		font-size:12px;
+		text-decoration:none;
+		padding-top:0px;
+
+	}
+	.infotitle a:hover
+	{
+		color:#BD0A01;
+		text-decoration:underline;
+	}

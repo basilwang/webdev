@@ -1,0 +1,122 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+   <style>
+	 *{padding:0px;margin:0px;}
+	 body{font-size:14px;font-family:华文细黑;}
+	 form{width:800px;}
+	 form p { position: relative; width: 100%;margin:10px 0;}
+	 
+     fieldset{
+		margin:10px 0;
+		padding:10px;
+		border:1px solid #ccc;
+		background-color:#F5F5F5;
+		width:100%;
+	 }
+	
+	 legend{font-weight:bold;}
+	 .required {font-size:14px;color:red;}
+	.feedback {
+	  font-weight: bold;
+	  color:red;
+	  padding-left: 18px;
+	  background: url(images/error.png) no-repeat left top;
+	}
+	 input[type="text"]{width:200px;}
+	 h5{float:left;width:100px;}
+	 div{float:left; width:200px;}
+   </style>
+ </HEAD>
+
+ <BODY>
+  <form id="comments_form" action="#" method="post">
+  <h1>一个表单样式</h1>
+
+  <fieldset>
+	<legend>联系信息</legend>
+	   <p>
+			<label>姓名<span class="required">(必须的*)</span></label>
+			<input type="text" id="txtname" name="txtname" />
+	   </p>
+	   <p>
+			<label>电子邮件：</label>
+			<input type="text" id="txtemail" name="txtemail" /><span class="feedback">Incorrect email address. Please try again.</span>
+	   </p>
+	   <p>
+			<label>个人站点：</label>
+			<input type="text" id="txtwebsite" name="txtwebsite" />
+	   </p>
+  </fieldset>
+  <fieldset>
+	<legend>个人基本信息</legend>
+	<p>
+		<label>出生地：</label>
+		<select>
+		  <option value="USA" selected="selected">美国</option>
+		  <option value="England">英国</option>
+		  <option value="china">中国</option>
+		</select>
+	</p>
+	<p>
+		<label>出生日期：</label>
+	    <label>月份</label>	 
+		  <select name="monthOfBirth" id="monthOfBirth">
+			  <option value="1">January</option>
+			  <option value="2">February</option>
+			  <option value="3">March</option>
+		  </select>
+	   <label>年度</label>
+		<input name="yearOfBirth" id="yearOfBirth" type="text" />
+	</p>
+  <h5>您喜欢的颜色</h2>
+  <div>
+	  <p>
+		  <input class="checkbox" id="red" name="red" type="checkbox" value="red" />
+		  <label>red</label>
+	  </p> 
+	  <p>
+		  <input class="checkbox" id="yellow" name="yellow" type="checkbox" value="yellow" />
+		  <label>yellow</label>
+	  </p>
+  
+	  <p>
+		  <input class="checkbox" id="pink" name="pink" type="checkbox" value="pink" />
+		  <label>pink</label>
+	  </p>
+  <p>
+	  <input class="checkbox" id="green" name="green" type="checkbox" value="green" />
+	  <label>green</label>
+  </p>
+  </div>
+  
+  <div>
+	  <p>
+	  <input class="checkbox" id="orange" name="orange" type="checkbox" value="orange" />
+	  <label>orange</label>
+	  </p>
+  
+	  <p>
+	  <input class="checkbox" id="purple" name="purple" type="checkbox" value="purple" />
+	  <label>purple</label>
+	  </p>
+  
+	  <p>
+	  <input class="checkbox" id="blue" name="blue" type="checkbox" value="blue" />
+	  <label>blue</label>
+	  </p>
+  
+	  <p>
+	  <input class="checkbox" id="other" name="other" type="checkbox" value="other" />
+	  <label>other</label>
+	  </p>  
+  </div>
+  </fieldset>
+  </form>
+ </BODY>
+</HTML>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <style>
+  *{margin:0px;padding:0px;}
+  /* 相对定位 */
+	#div1
+	{
+	   width:200px;
+	   height:100px;
+	   border:2px solid red;	
+	 }
+	#div2
+	{
+	      width:200px;
+		  height:100px;
+		  border:2px solid red;
+          position:relative;
+		  top:100px;
+		  left:50px;
+	}
+
+	#div3{width:200px;height:100px;border:2px solid red;	}
+
+/*  绝对定位  */
+	#div21{width:200px;height:100px;border:1px solid black;	}
+	#div22{width:200px;height:100px;border:1px solid black;	position:absolute;top:100px;left:250px}
+	#div23{width:200px;height:100px;border:1px solid black;	}
+	
+  </style>
+ </HEAD>
+
+ <BODY>
+  <p>1、相对定位</p>
+  <div id="div1">relative div1</div>
+  <div id="div2">relative div2</div>
+  <div id="div3">relative div3</div>
+  <br/>
+<br/>
+<br/>
+<br/>
+
+   <p>2、绝对定位</p>
+  <div id="div21">第一个div</div>
+  <div id="div22">第二个div绝对定位</div>
+  <div id="div23">第三个div</div>
+ 
+ </BODY>
+</HTML>

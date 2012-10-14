@@ -1,0 +1,60 @@
+BODY {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px
+}
+TABLE {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px
+}
+SELECT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px
+}
+UL {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px
+}
+LI {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px
+}
+BODY {
+	BACKGROUND: #fff; MARGIN: 0px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 19px
+}
+bottom {
+	FONT-SIZE: 12px; LINE-HEIGHT: 19px
+}
+A:link {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "宋体"; TEXT-DECORATION: underline
+}
+A.mu:link {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.mu:visited {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+A.mu:hover {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #ffff99; FONT-FAMILY: "宋体"; TEXT-DECORATION: none
+}
+.font {
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.cfff {
+	COLOR: #fff
+}
+.lfff {
+	COLOR: #fff
+}
+A.lfff:link {
+	COLOR: #fff
+}
+A.lfff:visited {
+	COLOR: #fff
+}
