@@ -1,9 +1,12 @@
- <style type="text/css">
-	
-	
-	a:visited{color:Gray}
-	a:hover{color:Red;}
-		
+<style type="text/css">
+        a:visited
+        {
+            color: Gray;
+        }
+        a:hover
+        {
+            color: Red;
+        }
         .ss
         {
             background-color: #f8f4f1;
@@ -40,15 +43,20 @@
             font-size: 10pt;
             float: left;
             padding-left: 10px;
-			
         }
-	.x1 a{color: gray;}
+        .x1 a
+        {
+            color: gray;
+        }
         .x2
         {
             font-size: 10pt;
             float: right;
         }
-	.x2 a{color: gray;}
+        .x2 a
+        {
+            color: gray;
+        }
         .yy
         {
             margin: 0px auto;
@@ -102,7 +110,10 @@
             background-color: #fb983a;
             margin: 0px 0xp;
         }
-		span a{color: white;}
+        span a
+        {
+            color: white;
+        }
         .z
         {
             background-color: #fb983a;
@@ -118,9 +129,7 @@
             padding: 1px 15px 1px 0px;
             font-size: 10pt;
             font-weight: bold;
-
         }
-	
         .aa
         {
             width: 100%;
@@ -128,10 +137,9 @@
             background-color: #f8f4f1;
             margin: 0px 0xp;
         }
-		
         .a
         {
-            width: 998px;
+            width: 1000px;
             margin: 0px auto;
             background-color: white;
             height: 550px;
@@ -165,7 +173,7 @@
         {
             height: 40px;
             width: 85px;
-	background:#fca441;
+            background: #fca441;
         }
         .b
         {
@@ -183,10 +191,7 @@
             border-bottom: 1px solid gray;
             font-size: 10pt;
         }
-        .style2
-        {
-            width: 31px;
-        }
+      
         .b1
         {
             height: 170px;
@@ -198,17 +203,18 @@
             height: 100px;
             width: 1000px;
             margin: 0px auto;
+            font-size: 3pt;
         }
         .c span
         {
             float: left;
             font-size: 10pt;
-            padding-left: 0px;
-            padding-right: 15px;
             padding-top: 10px;
-            padding-bottom: 0px;
+            font-size: 9pt;
             height: 30px;
-            width: auto;
+            width: 63px;
+	   padding-left:10px;
+            
         }
         .d
         {
