@@ -1,0 +1,391 @@
+<%@ Page Language="C#" AutoEventWireup="true"  CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>无标题页</title>
+   <style type="text/css">
+     .biaoti
+     {
+     	background:red;
+     	margin:0px;
+     	padding:0px;
+     	border:"1";
+     	height:auto;
+     	width:100%;
+     	}
+     #lianjie
+     {
+     	margin:20px;
+     	padding:60px;
+     	border:"1";
+     	height:430px;
+     	width:560px
+     }
+      #zhuce
+     {
+     	margin:25px;
+     	padding:60px;
+     	border:"1";
+     	height:430px;
+     	width:560px
+     }
+    .biaoti-right
+     {
+       text-decoration:none;
+       color:#FFFFFF;
+       padding:0px;
+     	border:"1";
+     	width:70%;
+     	height:0px;
+     	margin-top:0px;
+  }
+     .biaoti-left
+  {   
+        padding:0px;
+     	border:"0"; 
+         width:auto;
+     	height:auto;
+     }
+     .zhuce-1
+     {
+     	margin-top:10px;
+     	margin-bottom:10px;
+     	 padding:0px;
+     	border:"1"; 
+     	width:70%;
+     	height:auto;
+     	text-align:left;
+     }
+     .zhuce-2
+     {
+     	margin-top:10px;
+     	margin-bottom:10px;
+     	 padding:0px;
+     	border:"1"; 
+     	width:30%;
+     	height:auto;
+     	text-align:right;
+     }
+     #h3{
+		     font-family:幼圆;
+			 width:315px;height:22px;
+			 color:#333333;
+			 font-size:20px;
+			 margin-bottom:10px;
+			 margin-top:0px;
+			 }
+	 #input_zhuce
+		  {
+		  	background-color:#D32C47;
+		   font-family:幼圆;
+		    color:#FFFFFF;
+		  }	 
+	.a_head_right
+	                {
+		              color:#fad9db;
+					  text-decoration:none;
+					  font-size:15px;
+					  padding:10px;
+					  } 
+	  .lianjie-1
+     {
+     	margin-top:10px;
+     	margin-bottom:10px;
+     	 padding:0px;
+     	border:"1"; 
+     	width:70%;
+     	height:auto;
+     }
+   .lianjie-2{
+		              color:red;
+					  text-decoration:none;
+					  cursor:pointer;
+					  display:inline;
+			  } 
+ .zhuce-left
+  {  
+  	   margin:5px;
+        padding:0px;
+     	border:"1"; 
+     	width:auto;
+     	height:auto;
+     }		  
+     .zhuce-di
+     {
+     	     font-family :幼圆;
+			 width:315px;height:22px;
+			 color:#333333;
+			 font-size:15px;
+           margin:50px,0px,50px,10px;
+    }
+    .youlian
+    {
+     border-top:solid 1px black;
+     width:70%;
+     height:50px;
+    }
+   .youlian-1{
+					  text-decoration:none;
+					 font-size:12px;
+					 margin-left:5px;
+					 margin-right:5px;
+					 color: Gray;
+			  } 
+   .youlian-2{
+					 text-decoration:none;
+					 font-size:12px;
+					 margin:5px;
+					 padding-left:20px;
+					 color: Gray;
+			  } 
+   </style>
+</head>
+<body>
+ <div class="biaoti"> 
+    <center>
+      <div class="biaoti-right">
+            <a style="float:left;" href="http://www.baidu.com/"><img style="border-width: 0px 0px 0px 0px"src="0.jpg" />  </a> 
+             <div style="float:right;">
+           <a  class="a_head_right"href="http://www.baidu.com/">导航</a>
+           </div>
+     <div style="float:right;">
+          <a class="a_head_right"href="http://www.baidu.com/"> 帮助</a>
+          </div>
+       <div style="float:right;">
+           <a class="a_head_right" href="http://www.baidu.com/">登陆</a>
+           </div>
+      <div style="float:right;">
+          <a class="a_head_right"href="http://www.baidu.com/"> 注册</a>
+          </div> 
+    </div>
+    </center>
+       </div>   
+       <div id="lianjie" style="float:right;top:50px;">
+       <div class="lianjie-1">
+           已经是开心网用户？ <a class="lianjie-2" href="http://www.baidu.com/">直接登陆</a><br />
+           <p style="margin:15px,5px,15px,5px;font-size:12px;"> <a class="lianjie-2"href="http://www.baidu.com/">使用合作网站账号登陆</a></p>
+       </div>
+       <center>
+       <div class="zhuce-left"style="float:left;">
+            <a class="lianjie-2" href="http://www.baidu.com/">
+           <img style="border-width: 0px 0px 0px 0px" src="4.jpg" /> 
+           </a>
+             <a class="lianjie-2" href="http://www.baidu.com/">
+           <img style="border-width: 0px 0px 0px 0px"src="3.jpg" />
+            </a>
+              <a class="lianjie-2" href="http://www.baidu.com/">
+           <img style="border-width: 0px 0px 0px 0px"src="2.jpg" />
+            </a>
+            <a class="lianjie-2" href="http://www.baidu.com/" >
+                <img style="border-width: 0px 0px 0px 0px"src="1.jpg" /> <br />
+           </a>
+       </div>
+       <div style="clear:left; text-align:left">
+       <div class="zhuce-di">
+           <p style="  font-size:30px;color:red;">开心网</p>
+           <p>平均每天有<b style="color:red;">80</b>位好友</p>
+          <p>每天，平均每人上传<b style="color:red;">10</b>张照片</p>
+          <p>每天有<b style="color:red;">1000万</b>次好友互动在这里发生着</p>
+          <p>中国人对<b style="color:red;">社交网络</b>的真正了解从这里开始</p>
+      </div>
+     </div>
+       </center>
+    </div> 
+     <div id="zhuce" style="top:30px;">
+     <center>
+        <div class="zhuce-1">
+            <div id="h3">
+           十秒加入开心网，找到全部好友
+           </div>
+       </div>
+         <div class="zhuce-1"style="float:right;" >
+           <input type="text" name="user" /><br />
+           <a href="http://www.baidu.com/"><font size="2.5">如果没有邮箱，点击注册</font></a>
+       </div>
+       <div class="zhuce-2"style="float:left;">
+            您的邮箱：
+      </div> 
+       <div class="zhuce-1"style="float:right;" >
+          <input type="password" name="password"/>
+       </div>
+        <div class="zhuce-2"style="float:left;">
+            创建密码：
+      </div> 
+      <div class="zhuce-1"style="float:right;" >
+           <input type="text" name="name" />
+      </div>
+       <div class="zhuce-2"style="float:left;">
+           姓&nbsp&nbsp&nbsp&nbsp名：
+      </div> 
+       <div class="zhuce-1"style="float:right;" >
+          男性 <input type="radio" checked="checked" name="Sex" value="male" />
+          女性 <input type="radio" name="Sex" value="female" />
+      </div>
+      <div class="zhuce-2"style="float:left;">
+           性&nbsp&nbsp&nbsp&nbsp别：
+      </div> 
+       <div class="zhuce-1"style="float:right;" >
+      <select name="year">
+                  <option value="1980">1980</option>
+                  <option value="1981">1981</option>
+                  <option value="1982" selected="selected">1982</option>
+                  <option value="1983">1983</option>
+                  <option value="1984">1984</option>
+                  <option value="1985">1985</option>
+                  <option value="1986">1986</option>
+                  <option value="1987">1987</option>
+                  <option value="1988">1988</option>
+                  <option value="1989">1989</option>
+                  <option value="1990">1990</option>
+                  <option value="1991">1991</option>
+                  <option value="1992">1992</option>
+                  <option value="1993">1993</option>
+                  <option value="1994">1994</option>
+                  <option value="1995">1995</option>
+                  <option value="1996">1996</option>
+                  <option value="1997">1997</option>
+                  <option value="1998">1998</option>
+                  <option value="1999">1999</option>
+            </select>
+              月
+            <select name="month">
+                  <option value="01">01</option>
+                  <option value="02">02</option>
+                  <option value="03">03</option>
+                  <option value="04">04</option>
+                  <option value="05">05</option>
+                  <option value="06">06</option>
+                  <option value="07">07</option>
+                  <option value="08">08</option>
+                  <option value="09">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+              </select>
+                日
+              <select>
+                   <option value="01">01</option>
+                   <option value="02">02</option>
+                   <option value="03">03</option>
+                   <option value="04">04</option>
+                   <option value="05">05</option>
+                   <option value="06">06</option>
+                   <option value="07">07</option>
+                   <option value="08">08</option>
+                   <option value="09">09</option>
+                   <option value="10">10</option>
+                   <option value="11">11</option>
+                   <option value="12">12</option>
+                   <option value="13">13</option>
+                   <option value="14">14</option>
+                   <option value="15">15</option>
+                   <option value="16">16</option>
+                   <option value="17">17</option>
+                   <option value="18">18</option>
+                   <option value="19">19</option>
+                   <option value="20">20</option>
+                   <option value="21">21</option>
+                   <option value="22">22</option>
+                   <option value="23">23</option>
+                   <option value="24">24</option>
+                   <option value="25">25</option>
+                   <option value="26">26</option>
+                   <option value="27">27</option>
+                   <option value="28">28</option>
+                   <option value="29">29</option>
+                   <option value="30">30</option>
+                   <option value="31">31</option>
+             </select>
+          </div>
+          <div class="zhuce-2"style="float:left;">
+           出生年月：
+      </div> 
+        <div class="zhuce-1"style="float:right;" > 
+          <input type="radio" checked="checked" name="Sex" value="male" />在上学
+         <input type="radio" name="Sex" value="female" />   已工作
+      </div>
+      <div class="zhuce-2"style="float:left;">
+           职&nbsp&nbsp&nbsp&nbsp业：
+      </div> 
+        <div class="zhuce-1"style="float:right;" >
+           <select name="place">
+                  <option value="济南"selected="selected">济南</option>
+                  <option value="青岛">青岛</option>
+                  <option value="淄博">淄博</option>
+                  <option value="德州">德州</option>
+                  <option value="临沂">临沂</option>
+                  <option value="东营">东营</option>
+                  <option value="威海">威海</option>
+                  <option value="济宁">济宁</option>
+                  <option value="其他">其他</option>
+           </select> 
+         </div> 
+         <div class="zhuce-2"style="float:left;">
+           出生地点：
+      </div> 
+       <div class="zhuce-1"style="float:right;" > 
+        <input type="checkbox"/>同意 <a href="http://www.baidu.com/">开心网服务条款</a>
+        </div>
+         <div class="zhuce-1">  
+         <input id="input_zhuce"type="submit" value="同意条款，点击注册" style="background-color:red" />
+          </div>
+         </center>
+       </div>
+       <center>
+       <div class="youlian">
+           <div style="float:left;">
+          <a class="youlian-1"href="http://www.baidu.com/">关于我们</a>
+          </div>
+          <div style="float:left;">
+          <a class="youlian-1"href="http://www.baidu.com/">手机中心</a>
+          </div>
+          <div style="float:left;">
+          <a class="youlian-1"href="http://www.baidu.com/">开放平台</a>
+          </div>
+          <div style="float:left;">
+          <a class="youlian-1"href="http://www.baidu.com/">应用中心</a>
+          </div>
+          <div style="float:left;">
+          <a class="youlian-1"href="http://www.baidu.com/">自助广告</a>
+          </div>
+          <div style="float:left;">
+          <a class="youlian-1"href="http://www.baidu.com/">开心招聘</a>
+          </div>
+          <div style="float:left;">
+          <a class="youlian-1"href="http://www.baidu.com/">客服</a>
+          </div>
+          <div style="float:left;">
+          <a class="youlian-1"href="http://www.baidu.com/">服务</a>
+          </div>
+           <div style="float:right;">
+          <a class="youlian-1">2012  开心网<br /></a>
+          </div>
+            
+           <div style="clear:left">
+           <center>
+            <div class="youlian-2"style="float:left;">
+              北京开心人信息技术有限公司
+          </div>
+           <div class="youlian-2"style="float:left;">
+              文网文[2009]157号(甲) 
+          </div>
+           <div class="youlian-2"style="float:left;">
+              京ICP证080482号
+          </div>
+           <div class="youlian-2"style="float:left;">
+              京公网安备1100003号
+          </div>
+          <div class="youlian-2"style="float:left;">
+              (京)-非经营性-2009-0009
+          </div>
+          <div class="youlian-2"style="float:left;">
+              未成年家长监护
+          </div>
+          </center>
+        </div> 
+        </div>
+           </center>
+   </body>
+</html>
