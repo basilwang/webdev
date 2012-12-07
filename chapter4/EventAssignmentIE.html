@@ -20,7 +20,7 @@
 			alert("doclick3 ");
 		}
 	
-		window.onload=function()
+		function init()
 		{
 			var  btn2= document.getElementById("btn2");
 		   //btn1.onclick=doclick1;//for all browser
@@ -37,7 +37,7 @@
   </script>
  </HEAD>
 
- <BODY>
+ <BODY onload="init();">
 	 <input type="button" id="btn0" name="bnt0" value="html事件分配"  onclick="alert('这是html事件分配方式！')"/>
 	  <input type="button" id="btn1" name="btn1" value="javascript事件分配"/>
 	  <input type="button" id="btn2" name="btn2" value="IE-attachEvent方法"/>

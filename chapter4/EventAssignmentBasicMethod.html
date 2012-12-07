@@ -16,25 +16,32 @@
 		{
 			alert('javascript事件分配方式2！');
 		}
-        function init()
-		{
-		var  btn1= document.getElementById("btn1");
-			//for all browser,不要带括号；
-		  btn1.onclick=doclick1;
-		   btn1.onclick=doclick2;
-		  //btn1.onclick=function(){alert("hello");};
 
-								  
-		}	
 		
   </script>
  </HEAD>
 
- <BODY onload="init();">
-	<!--  <input type="button" id="btn0" name="bnt0" value="html事件分配"  onclick="doclick1();"/> -->
-	 <input type="button" id="btn0" name="bnt0" value="html事件分配"  onclick="alert('这是html事件分配方式！')"/>
-	  <input type="button" id="btn1" name="btn1" value="javascript事件分配"/>
+ <BODY >
+	  <input type="button" id="btn0" name="bnt0" value="html事件分配"  onclick="doclick1();"/>
 
+
+<!--<input type="button" id="btn0" name="bnt0" value="html事件分配"
+	      onclick="alert('这是html事件分配方式！')"/>-->
+
+
+	  <input type="button" id="btn1" name="btn1" value="javascript事件分配"/>
+      <script>
+         var  btn1= document.getElementById("btn1");
+		 //for all browser,不要带括号；
+		 btn1.onclick=doclick1;
+		 btn1.onclick=doclick2;
+		 btn1.onclick=function()
+		      {
+                 alert(" congratulations !!!!");
+
+			  } ;
+	     btn1.onclick=function(){alert("so what?");};
+	  </script>
 
 
  </BODY>
