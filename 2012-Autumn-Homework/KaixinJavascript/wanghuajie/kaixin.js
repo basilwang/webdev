@@ -1,6 +1,13 @@
-window.addEvent =function(o,s,fn){
-  o.attachEvent?o.attachEvent('on'+s,fn):o.addEventListener(s,fn,false);
-  return o;
+window.addEvent =function(element,event,fn){
+  if(element.addEventListener)
+  {
+	  element.addEventListener(event,fn,false);
+	  
+  }
+  else if(element.attachEvent){
+     element.attachEvent("on"+event, function(){ fn.call(element) });
+     
+   }
 }
 function tip(title,isInfo,id)
 {
@@ -42,12 +49,14 @@ function prepareTip()
 	var e=document.getElementById("email");
 	window.addEvent(e,'blur',blurFn);
 	window.addEvent(e,'focus',focusFn);
+	/* ÔÝÊ±×¢Ïúµô
 	var n=document.getElementById("name");
 	window.addEvent(n,'blur',blurFn);
 	window.addEvent(n,'focus',focusFn);
 	var p=document.getElementById("password");
 	window.addEvent(p,'blur',blurFn);
 	window.addEvent(p,'focus',focusFn);
+	*/
  }
  function blurFn()
  {
