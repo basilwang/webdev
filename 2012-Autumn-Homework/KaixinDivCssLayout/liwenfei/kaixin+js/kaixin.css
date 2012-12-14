@@ -1,0 +1,156 @@
+       div{font-size:12px;line-height:19px;position:relative;}
+	   a{text-decoration:none;}
+	   a:link {color: #0000ff} /* 未访问的链接 */
+       /*a:visited {color: #ff0000}  已访问的链接 */
+       a:hover {color: #00ff00} /* 鼠标移动到链接上 */
+       a:active {color: #ff0000} /* 选定的链接 */
+	   img{border:0px;}
+	   #head{width:100%; background-color:#e33b4a}
+	   #head_content{width:1005px; margin:0px auto;}
+	   span.left{margin-right:350px; }
+	   span.right{margin-left:350px;}
+	   #content{
+	   margin:0px auto;
+	   height:596px;
+	   width:1005px;
+	   padding-top:41px;
+	   border-bottom:1px solid rgb(187,187,187);
+	   }
+	   #content_left{
+	   width:508px;
+	   height:560px;
+	   float:left;
+	   margin:29px 0px 0px 74px;
+	   display:inline;
+	   }
+	   #title{
+	   width:315px;
+	   height:22px;
+	   margin:9px 0px 27px -2px;
+	   background: url("http://img1.kaixin001.com.cn/i/register/step8.png") no-repeat scroll 0% 0% transparent;
+	   }
+	   .textbox{height:20px;width:230px;border:1px soild rgb(255,255,255)}
+	   .login{width:100%;margin-bottom:22px;}
+	   #mail{width:100%;}
+	   #mail_1{padding-left:67px;margin-bottom:20px;}
+	   #agree{padding-left:67px;margin-bottom:19px;width:427px;}
+	   #sub{width:427px;padding-left:67px;margin:-4px 0px 15px;}
+	   #submit{background: none repeat scroll 0% 0% transparent;width: 175px;
+       height: 36px;
+       color: white;
+       text-align: center;
+       border: medium none;
+       cursor: pointer;
+	   background-image: url("http://img1.kaixin001.com.cn/i/register/spr_reg.png");
+	   font: bold 14px/1 Arial;
+	   }
+	   #content_right{
+	   width:351px;
+	   height:auto;
+	   float:left;
+	   margin:38px 0px 0px;
+	   border:1px solid rgb(238,238,238);
+	   border-radius:1px 1px 1px 1px;
+	   }
+	    .adresslogin{width:100%;margin-bottom:5px;}
+           .hometown{float:left;z-index:10;position:absolute;margin-left:50px;display:none;margin-top:-5px;}
+           #adress{width:454px;border-left: 1px solid rgb(201, 201, 201);border-right: 1px solid rgb(201, 201, 201);    background: none repeat scroll 0% 0% rgb(247, 247, 247);}       
+           #adressbox{width:410px;cursor:pointer;padding:3px 3px 3px 7px;margin:0px auto;border: 1px solid rgb(200, 200, 200);line-height: 180%;background: none repeat scroll 0% 0% rgb(255, 255, 255);}
+           #adressbut{padding: 10px 0px 4px 392px;}
+           .dizhi{padding: 2px 6px;color: rgb(51, 102, 153);}
+	   #content_right01{padding:21px 0px 30px 30px; display:block;font-size:14px;}
+	   #content_right02{margin:30px;color:rgb(100,100,100);}
+	   #content_right03{margin-left:30px;margin-top:12px;}
+	   #content_right04{width:351px;height:190px;
+	   background: url("http://img1.kaixin001.com.cn/i/register/reg_count2.png") repeat scroll 0% 0% transparent;}
+	   #bottom{
+	   width:1004px;
+	   height:auto;
+	   overflow:hidden;
+	   margin:0px auto;
+	   padding:0px 0px 50px;
+	   }
+	   #bottom01{margin-top:15px;margin-bottom:15px;}
+	   #bottom02{height:27px;
+	   line-height:27px;
+	   background:none repeat scroll 0% 0% rgb(240,239,239);
+	   text-align:center;
+	   color:rgb(153,153,153);}
+.tipFormat_f 
+{
+line-height: 19px;
+text-align: left;
+top: 0px;
+width: 178px;
+position: absolute;
+background-color:rgb(255, 229, 229);
+border: 1px solid rgb(255, 183, 183);
+left: 300px;
+color: rgb(221, 75, 57);
+vertical-align:middle;
+}
+.tipFormat_t {
+padding: 2px 6px;
+position: absolute;
+left: 300px;
+top: 0;
+width: 178px;
+border: 1px solid #DBDBDB;
+color: rgb(153, 153, 153);
+background: none repeat scroll 0% 0% rgb(249, 249, 249);
+vertical-align:middle;
+}
+.tipFormat_r {
+padding: 2px 6px;
+position: absolute;
+left: 300px;
+top: 0;
+}
+.eimg{float:left;padding-left:3px;}
+.emsg{float:left;padding-left:5px;padding-top:3px;width:150px;}
+#mail_type
+{
+	background-color :White ;
+	width:235px;
+	z-index :2;
+	float:left ;
+	position :absolute ;
+	left:60px;
+	display:none;
+	border: 1px solid rgb(204, 204, 204);
+	border-top-color :White;
+}
+.mtype:hover
+{
+	background-color :rgb(180,180,180);
+}
+.mtype{margin-top:5px;font-size:15px;color:rgb(201,201,201);}
+#navigate{
+	width:250px;
+	z-index :2;
+	right:-4px;
+	position :absolute ;
+	display:block;
+	background-color:white;
+	display:none;
+	
+	}
+	#navigate_left{width:95px;
+	               float:left;
+	               border: 1px solid rgb(204, 204, 204);
+	               border-right-width :0px;
+	             
+	               }
+	#navigate_right{width:95px;
+	                float:left;
+	                border: 1px solid rgb(204, 204, 204);
+	                }
+	.navigate:hover{background-color:red;}
+	.navigate
+	{
+		padding-top :5px;
+		}
+	#daohang{float:right;padding-right:50px;padding-top:19px;}
+	.href{color:black; 
+	       font-size :18px;
+	       }
