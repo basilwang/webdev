@@ -7,9 +7,10 @@
     <meta name="Keywords" content="" />
     <meta name="Description" content="" />
     <link href="wowotuan.css" rel="stylesheet" type="text/css" />
-    
+     <link href="validate.css" rel="stylesheet" type="text/css">
+     <script type="text/javascript" src="kaixin.js"></script>
 </head>
-<body>
+<body onload="prepareTip();">
     <div class="xx">
         <div class="x">
             <div class="x1">
@@ -64,7 +65,7 @@
                                 E-mail:
                             </td>
                             <td class="style3">
-                                <input type="text" name="fname" style="width: 250px; height: 25px; margin-right: 0px;" />
+                                <input id="email" type="text" name="fname" style="width: 250px; height: 25px; margin-right: 0px;" /><div id="emailtip"></div>
                             </td>
                         </tr>
                         <tr>

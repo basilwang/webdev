@@ -6,9 +6,11 @@
     <meta name="Author" content="">
     <meta name="Keywords" content="">
     <meta name="Description" content="">
-    <link rel="stylesheet" href="css/main.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+      <link href="validate.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="kaixin.js"></script>
 </head>
-<body>
+<body onload="prepareTip();">
     <form method="post">
     <div class="header">
         <div class="header_pic">
@@ -32,7 +34,7 @@
                         <label class="ultit">
                             电子邮箱：</label>
                         <div class="input">
-                            <input class="txt" type="text" name="txtemail" /></div>
+                            <input id="email" class="txt" type="text" name="txtemail" /><div id="emailtip"></div></div>
                         <div class="note">
                             如果没有邮箱，你可以用<a href="#">账号注册</a></div>
                     </li>
@@ -40,13 +42,13 @@
                         <label class="ultit">
                             创建密码：</label>
                         <div class="input">
-                            <input class="txt" type="password" name="txtpassword"></div>
+                            <input id="password" class="txt" type="password" name="txtpassword"><div id="passwordtip"></div></div>
                     </li>
                     <li>
                         <label class="ultit">
                             姓&nbsp&nbsp&nbsp&nbsp名：</label>
                         <div class="input">
-                            <input class="txt" type="text" name="txtname"></div>
+                            <input id="name" class="txt" type="text" name="txtname"><div id="nametip"></div></div>
                     </li>
                     <li>
                         <label class="ultit">
