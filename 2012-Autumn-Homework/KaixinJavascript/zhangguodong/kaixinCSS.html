@@ -62,13 +62,13 @@ function prepareTip()
 	var e=document.getElementById("email");
 	window.addEvent(e,'blur',blurFn);  //给email绑定一个事件
 	window.addEvent(e,'focus',focusFn);
-	e.addEventListener('keypress',autoemailshow,false);
-	e.addEventListener('blur',autoemailhide,false);
-	e.addEventListener('keyup',writeEmail,false);  //输入一个字符时，触发writeemail
-	var mail_1 =document.getElementById("mail_1");
-	mail_1.addEventListener('mouseover',mailmouseover,false);
-	mail_1.addEventListener('mouseout',mailmouseout,false);
-	mail_1.addEventListener('click',writeontext,false);
+	window.addEvent(e,'keypress',autoemailshow);
+	window.addEvent(e,'blur',autoemailhide);
+	window.addEvent(e,'keyup',writeEmail); //输入一个字符时，触发writeemail
+	var mail1 =document.getElementById("mail1");
+	window.addEvent(mail1,'mouseover',mailmouseover);
+	window.addEvent(mail1,'mouseout',mailmouseout);
+	window.addEvent(mail1,'click',writeOnText);
 	/* 暂时注销掉
 	var n=document.getElementById("name");
 	window.addEvent(n,'blur',blurFn);
@@ -90,36 +90,36 @@ function prepareTip()
 	 var ae=document.getElementById("autoemail");
 	 ae.style.display='none';
  }
- function writeontext()
+ function writeOnText()
  {
-     alert("在执行");
+	 alert("我在执行");
      var emailtext=document.getElementById("email");
-     emailtextvalue.value=document.getElementById("mail_1").innerHTML;
+     emailtext.value=document.getElementById("mail1").innerHTML;
  }
  function mailmouseover()
  {
-     mail_1=document.getElementById("mail_1");
-	 mail_1.style.backgroundColor="#f4f4f4";
+    var mail=document.getElementById("mail1");
+    mail.style.backgroundColor="#f4f4f4";
  }
  function mailmouseout()
  {
-     mail_1=document.getElementById("mail_1");
-	 mail_1.style.backgroundColor="#FFFFFF";
+     var mail=document.getElementById("mail1");
+	 mail.style.backgroundColor="#FFFFFF";
  }
- 
+
  function writeEmail()
  {
 	 var emailtextvalue=document.getElementById("email").value;
-	 document.getElementById("mail_1").innerHTML=emailtextvalue+"@qq.com";
-	 document.getElementById("mail_2").innerHTML=emailtextvalue+"@126.com";
-	 document.getElementById("mail_3").innerHTML=emailtextvalue+"@163.com";
-	 document.getElementById("mail_4").innerHTML=emailtextvalue+"@sina.com";
-	 document.getElementById("mail_5").innerHTML=emailtextvalue+"@sina.cn";
-	 document.getElementById("mail_6").innerHTML=emailtextvalue+"@hotmail.com";
-	 document.getElementById("mail_7").innerHTML=emailtextvalue+"@gmail.com";
-	 document.getElementById("mail_8").innerHTML=emailtextvalue+"@sohu.cn";
-	 document.getElementById("mail_9").innerHTML=emailtextvalue+"@yahoo.cn";
-	 document.getElementById("mail_10").innerHTML=emailtextvalue+"@139.cn";
+	 document.getElementById("mail1").innerHTML=emailtextvalue+"@qq.com";
+	 document.getElementById("mail2").innerHTML=emailtextvalue+"@126.com";
+	 document.getElementById("mail3").innerHTML=emailtextvalue+"@163.com";
+	 document.getElementById("mail4").innerHTML=emailtextvalue+"@sina.com";
+	 document.getElementById("mail5").innerHTML=emailtextvalue+"@sina.cn";
+	 document.getElementById("mail6").innerHTML=emailtextvalue+"@hotmail.com";
+	 document.getElementById("mail7").innerHTML=emailtextvalue+"@gmail.com";
+	 document.getElementById("mail8").innerHTML=emailtextvalue+"@sohu.cn";
+	 document.getElementById("mail9").innerHTML=emailtextvalue+"@yahoo.cn";
+	 document.getElementById("mail10").innerHTML=emailtextvalue+"@139.cn";
  }
  function blurFn()
  {
@@ -188,23 +188,23 @@ function prepareTip()
             </div>
             <div>
                 <ul>
-                    <li   style="position:relative">
+                    <li style="position:relative">
                         <label class="ultit">
                             电子邮箱：</label>
                         <div class="input">
                             <input class="txt" type="text" id="email" name="" /></div>
                         <div id="autoemail" class="autoemailstyle">
                              <div class="manyemail">请选择邮箱的类型</div>
-                             <div id="mail_1" class="manyemail">@qq.com</div>
-                             <div id="mail_2" class="manyemail">@126.com</div>
-                             <div id="mail_3" class="manyemail">@163.com</div>
-                             <div id="mail_4" class="manyemail">@sina.com</div>
-                             <div id="mail_5" class="manyemail">@sina.cn</div>
-                             <div id="mail_6" class="manyemail">@hotmail.com</div>
-                             <div id="mail_7" class="manyemail">@gmail.com</div>
-                             <div id="mail_8" class="manyemail">@sohu.cn</div>
-                             <div id="mail_9" class="manyemail">@yahoo.cn</div>
-                             <div id="mail_10" class="manyemail">@139.cn</div>
+                             <div id="mail1" class="manyemail">@qq.com</div>
+                             <div id="mail2" class="manyemail">@126.com</div>
+                             <div id="mail3" class="manyemail">@163.com</div>
+                             <div id="mail4" class="manyemail">@sina.com</div>
+                             <div id="mail5" class="manyemail">@sina.cn</div>
+                             <div id="mail6" class="manyemail">@hotmail.com</div>
+                             <div id="mail7" class="manyemail">@gmail.com</div>
+                             <div id="mail8" class="manyemail">@sohu.cn</div>
+                             <div id="mail9" class="manyemail">@yahoo.cn</div>
+                             <div id="mail10" class="manyemail">@139.cn</div>
                         </div>
                         <div id="emailtip">
                         </div>
