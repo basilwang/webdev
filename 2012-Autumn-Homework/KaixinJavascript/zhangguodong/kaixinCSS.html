@@ -69,14 +69,13 @@ function prepareTip()
 	window.addEvent(mail1,'mouseover',mailmouseover);
 	window.addEvent(mail1,'mouseout',mailmouseout);
 	window.addEvent(mail1,'click',writeOnText);
-	/* 暂时注销掉
-	var n=document.getElementById("name");
+/*	var n=document.getElementById("name");
 	window.addEvent(n,'blur',blurFn);
 	window.addEvent(n,'focus',focusFn);
+	*/
 	var p=document.getElementById("password");
 	window.addEvent(p,'blur',blurFn);
 	window.addEvent(p,'focus',focusFn);
-	*/
  }
  
  function autoemailshow()
@@ -146,7 +145,43 @@ function prepareTip()
  function checkFormat(o)
  {
 	// o 是要检查格式的dom对象
-	return true;
+//	alert(o.id);
+    var check=o.value.toString();
+	switch(o.id)
+	{
+		case "email":
+		{
+           if(check.indexOf("@qq.com")>0)
+	           return false;
+	      else if(check.indexOf("@126.com")>0)
+	           return false;
+	      else if(check.indexOf("@163.com")>0)
+	           return false;
+	      else if(check.indexOf("@sina.com")>0)
+	           return false;
+	      else if(check.indexOf("@hotmail.com")>0)
+	           return false;
+	      else if(check.indexOf("@gmail.com")>0)
+	           return false;
+	      else if(check.indexOf("@sohu.cn")>0)
+	           return false;
+	      else if(check.indexOf("@yahoo.cn")>0)
+	           return false;
+	      else if(check.indexOf("@139.cn")>0)
+	           return false;
+	      else
+	           return true;
+		}
+		break;
+		case "password":
+		{
+			if(check.length<6)
+			return true;
+			else
+			return false;
+		}
+		break;
+	}
  }
  function focusFn()
  {
@@ -211,11 +246,12 @@ function prepareTip()
                   <div class="note">
                             如果没有邮箱，你可以用<a href="#">账号注册</a></div>
                     </li>
-                    <li>
+                    <li style="position:relative">
                         <label class="ultit">
                             创建密码：</label>
                         <div class="input">
-                            <input class="txt" type="password" name="txtpassword"></div>
+                            <input class="txt" type="password" id="password" name=""></div>
+                        <div id="passwordtip"></div>
                     </li>
                     <li>
                         <label class="ultit">
