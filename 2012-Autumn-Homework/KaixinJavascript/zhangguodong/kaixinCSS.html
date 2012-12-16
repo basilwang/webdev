@@ -59,17 +59,25 @@ tip.prototype=(function()
 
 function prepareTip()
  {
-	var bd=document.getElementsByTagName('body')[0];    //取得body对象
-	window.addEvent(bd,'click',autoemailhide);   //特别注意冒泡执行，先执行那个小的div的click事件，然后再执行body的onclick
+	 //取得body对象
+	var bd=document.getElementsByTagName('body')[0];  
+	//特别注意冒泡执行，先执行那个小的div的click事件，然后再执行body的onclick
+	window.addEvent(bd,'click',autoemailhide);   
 	var e=document.getElementById("email");
-	window.addEvent(e,'blur',blurFn);  //给email绑定一个事件
+	 //给email绑定一个事件
+	window.addEvent(e,'blur',blurFn); 
 	window.addEvent(e,'focus',focusFn);
 	window.addEvent(e,'keypress',autoemailshow);
-	window.addEvent(e,'keyup',writeEmail); //输入一个字符时，触发writeemail
-	var mail1 =document.getElementById("mail1");
-	window.addEvent(mail1,'mouseover',mailmouseover);
-	window.addEvent(mail1,'mouseout',mailmouseout);
-	window.addEvent(mail1,'click',writeOnText);
+	 //输入一个字符时，触发writeemail
+	window.addEvent(e,'keyup',writeEmail);
+	for(i=1;i<11;i++)
+	{
+		  //给所有的小的邮箱提示都绑定事件
+		var mail=document.getElementById("mail"+i);       
+		window.addEvent(mail,'mouseover',mailmouseover);
+	    window.addEvent(mail,'mouseout',mailmouseout);
+	    window.addEvent(mail,'click',writeOnText);
+	}
 	var n=document.getElementById("name");
 	window.addEvent(n,'blur',blurFn);
 	window.addEvent(n,'focus',focusFn);
@@ -85,8 +93,7 @@ function prepareTip()
 	ae.style.display='block';
  }
  function autoemailhide()
- {
-	 
+ { 
 	 var ae=document.getElementById("autoemail");
 	 ae.style.display='none';
  }
@@ -94,17 +101,19 @@ function prepareTip()
  {
 	    //特别注意！！当点击时，文本框会失去焦点，下面的autoemail自动隐藏
      var emailtext=document.getElementById("email");
-     emailtext.value=document.getElementById("mail1").innerHTML;
+     emailtext.value=this.innerHTML;
+	 var emailtip=document.getElementById("emailtip");
+	 emailtip.style.display="none";      //点击补全邮箱后，需要把文本错误的提示框隐藏！！
  }
  function mailmouseover()
  {
-    var mail=document.getElementById("mail1");
-    mail.style.backgroundColor="#f4f4f4";
+   // var mail=document.getElementById(m.id);
+    this.style.backgroundColor="#f4f4f4";
  }
  function mailmouseout()
  {
-     var mail=document.getElementById("mail1");
-	 mail.style.backgroundColor="#FFFFFF";
+    // var mail=document.getElementById("mail1");
+	 this.style.backgroundColor="#FFFFFF";
  }
 
  function writeEmail()
@@ -141,7 +150,50 @@ function prepareTip()
 	t.hideTip();
 	//如果有错误的时候开启 error tip
 	if(checkFormat(this))
+	{
+	hiderightimg(this.id);
 	t.showTip();
+	}
+	else
+	showrightimg(this.id);
+	//当文本框中的内容为空时，也不显示绿色的对号！
+	if(this.value.toString().length==0)
+	hiderightimg(this.id);
+ }
+ function showrightimg(id)
+ {
+	 var img
+	 switch(id)
+	 {
+		 case "email":
+			 img=document.getElementById("rightimgemail");
+			 break;
+		 case "password":
+		     img=document.getElementById("rightimgpassword");
+			 break;
+		 case "name":
+		     img=document.getElementById("rightimgname");
+		     break;
+	 }
+	 img.style.display="inline";
+ }
+ function hiderightimg(id)
+ {
+	// alert("在执行");
+	 var img
+	 switch(id)
+	 {
+		 case "email":
+			 img=document.getElementById("rightimgemail");
+			 break;
+		 case "password":
+		     img=document.getElementById("rightimgpassword");
+			 break;
+		 case "name":
+		     img=document.getElementById("rightimgname");
+		     break;
+	 }
+	 img.style.display="none";
  }
  function checkFormat(o)
  {
@@ -170,7 +222,8 @@ function prepareTip()
 	           return false;
 	      else if(check.indexOf("@139.cn")>0)
 	           return false;
-		  else if(check.length==0)       //当文本框为空时也不显示tip
+			     //当文本框为空时也不显示tip
+		  else if(check.length==0)     
 		       return false;
 	      else
 	           return true;
@@ -214,7 +267,6 @@ function prepareTip()
  }
 	</script>
 </head>
-<!-- -->
 <body onLoad="prepareTip();">
     <form method="post">
     <div class="header">
@@ -239,7 +291,8 @@ function prepareTip()
                         <label class="ultit">
                             电子邮箱：</label>
                         <div class="input">
-                            <input class="txt" type="text" id="email" name="" /></div>
+                            <input class="txt" type="text" id="email" name="" />
+                            <img id="rightimgemail" class="rightStyle" src="images/right.gif" alt="正确"></div>
                         <div id="autoemail" class="autoemailstyle">
                              <div class="manyemail">请选择邮箱的类型</div>
                              <div id="mail1" class="manyemail">@qq.com</div>
@@ -262,14 +315,16 @@ function prepareTip()
                         <label class="ultit">
                             创建密码：</label>
                         <div class="input">
-                            <input class="txt" type="password" id="password" name=""></div>
+                            <input class="txt" type="password" id="password" name="">
+                            <img id="rightimgpassword" class="rightStyle" src="images/right.gif" alt="正确"></div>
                         <div id="passwordtip"></div>
                     </li>
                     <li style="position:relative">
                         <label class="ultit">
                             姓&nbsp&nbsp&nbsp&nbsp名：</label>
                         <div class="input">
-                            <input class="txt" type="text" id="name" name=""></div>
+                            <input class="txt" type="text" id="name" name="">
+                            <img id="rightimgname" class="rightStyle" src="images/right.gif" alt="正确"></div>
                         <div id="nametip"></div>
                     </li>
                     <li>

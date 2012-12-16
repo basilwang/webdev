@@ -29,3 +29,10 @@ width: 178px;
 	height:19px;
 	cursor: pointer;
 }
+.rightStyle
+{
+	position:absolute;
+	left:305px;
+	top:5px;
+	display:none;
+}
