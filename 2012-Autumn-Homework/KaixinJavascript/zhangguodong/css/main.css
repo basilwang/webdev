@@ -25,10 +25,12 @@
         .header_t
         {
             float: right;
-            margin-right: 8%;
+            margin-right: 10%;
             font-size: 12px;
             width: 200px;
+			height:41px;
             line-height: 40px;
+			position: relative;
         }
         .headert_a
         {

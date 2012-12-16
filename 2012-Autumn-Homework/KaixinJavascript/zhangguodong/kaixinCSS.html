@@ -99,6 +99,45 @@ function prepareTip()
 		var selectcity=document.getElementById("city"+j);
 	    window.addEvent(selectcity,'click',writeOnCity);
 	}
+	//给标题栏中的导航栏绑定事件
+	var headdirdiv=document.getElementById("directiondiv");
+	window.addEvent(headdirdiv,'mouseover',dirshow);
+	window.addEvent(headdirdiv,'mouseout',dirhide);
+	//给下边的大的导航栏绑定事件防止导航栏消失
+	var direction=document.getElementById("direction");
+	window.addEvent(direction,'mouseover',dirshow);
+	window.addEvent(direction,'mouseout',dirhide);
+	for(i=1;i<10;i++)
+	{
+	var littleDirLeft=document.getElementById("dleft"+i);
+	window.addEvent(littleDirLeft,'mouseover',alterRed);
+	window.addEvent(littleDirLeft,'mouseout',alterBackColor);
+	var littleDirRight=document.getElementById("dright"+i);
+	window.addEvent(littleDirRight,'mouseover',alterRed);
+	window.addEvent(littleDirRight,'mouseout',alterBackColor);
+	}
+ }
+ function alterRed()
+ {
+	 this.style.backgroundColor="rgb(235, 75, 85)";
+ }
+ function alterBackColor()
+ {
+	 this.style.backgroundColor="rgb(250,250,250)";
+ }
+ function dirshow()
+ {
+	 var dir=document.getElementById("direction");
+	 var headdiv=document.getElementById("directiondiv")
+	 headdiv.style.backgroundColor="#F04E58";
+	 dir.style.display="block";
+ }
+ function dirhide()
+ {
+	 var dir=document.getElementById("direction");
+	 var headdiv=document.getElementById("directiondiv")
+	 headdiv.style.backgroundColor="rgb(228, 64, 73)";
+	 dir.style.display="none";
  }
  function writeOnCity()
  {
@@ -309,8 +348,21 @@ function prepareTip()
                 <img class="picborder" src="images/p1.jpg" alt="kaixinlogo"></a>
         </div>
         <div class="header_t">
-            <a style="color: #FFFFFF;" href="#">注册</a> <a style="color: #FFFFFF;" href="#">登录</a>
-            <a style="color: #FFFFFF;" href="#">帮助</a> <a style="color: #FFFFFF;" href="#">导航</a>
+            <div><a class="dirdivstyle" style="color: #FFFFFF;" href="#">注册</a></div>
+            <div><a class="dirdivstyle" style="color: #FFFFFF;" href="#">登录</a></div>
+            <div><a class="dirdivstyle" style="color: #FFFFFF;" href="#">帮助</a></div>
+            <div id="directiondiv" class="dirdivstyle"><a id="headdirection" style="color: #FFFFFF;" href="#">导航</a></div>
+            <div id="direction" class="directionstyle">
+                   <div id="dleft1" class="leftdir">手机版</div><div id="dright1" class="rightdir">照片</div>
+                   <div id="dleft2" class="leftdir">转帖</div><div id="dright2" class="rightdir">评比</div>
+                   <div id="dleft3" class="leftdir">投票</div><div id="dright3" class="rightdir">电影</div>
+                   <div id="dleft4" class="leftdir">记录</div><div id="dright4" class="rightdir">视频</div>
+                   <div id="dleft5" class="leftdir">专题</div><div id="dright5" class="rightdir">开心集品</div>
+                   <div id="dleft6" class="leftdir">团购</div><div id="dright6" class="rightdir">网页游戏</div>
+                   <div id="dleft7" class="leftdir">小游戏</div><div id="dright7" class="rightdir">社交游戏</div>
+                   <div id="dleft8" class="leftdir">公共主页</div><div id="dright8" class="rightdir">美刻</div>
+                   <div id="dleft9" class="leftdir">动物王国</div><div id="dright9" class="rightdir">名品折扣</div>
+            </div>
         </div>
     </div>
     <div class="midd">
