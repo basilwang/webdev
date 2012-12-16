@@ -59,20 +59,20 @@ tip.prototype=(function()
 
 function prepareTip()
  {
+	var bd=document.getElementsByTagName('body')[0];    //取得body对象
+	window.addEvent(bd,'click',autoemailhide);   //特别注意冒泡执行，先执行那个小的div的click事件，然后再执行body的onclick
 	var e=document.getElementById("email");
 	window.addEvent(e,'blur',blurFn);  //给email绑定一个事件
 	window.addEvent(e,'focus',focusFn);
 	window.addEvent(e,'keypress',autoemailshow);
-	window.addEvent(e,'blur',autoemailhide);
 	window.addEvent(e,'keyup',writeEmail); //输入一个字符时，触发writeemail
 	var mail1 =document.getElementById("mail1");
 	window.addEvent(mail1,'mouseover',mailmouseover);
 	window.addEvent(mail1,'mouseout',mailmouseout);
 	window.addEvent(mail1,'click',writeOnText);
-/*	var n=document.getElementById("name");
+	var n=document.getElementById("name");
 	window.addEvent(n,'blur',blurFn);
 	window.addEvent(n,'focus',focusFn);
-	*/
 	var p=document.getElementById("password");
 	window.addEvent(p,'blur',blurFn);
 	window.addEvent(p,'focus',focusFn);
@@ -86,12 +86,13 @@ function prepareTip()
  }
  function autoemailhide()
  {
+	 
 	 var ae=document.getElementById("autoemail");
 	 ae.style.display='none';
  }
  function writeOnText()
  {
-	 alert("我在执行");
+	    //特别注意！！当点击时，文本框会失去焦点，下面的autoemail自动隐藏
      var emailtext=document.getElementById("email");
      emailtext.value=document.getElementById("mail1").innerHTML;
  }
@@ -169,13 +170,23 @@ function prepareTip()
 	           return false;
 	      else if(check.indexOf("@139.cn")>0)
 	           return false;
+		  else if(check.length==0)       //当文本框为空时也不显示tip
+		       return false;
 	      else
 	           return true;
 		}
 		break;
 		case "password":
 		{
-			if(check.length<6)
+			if(check.length<6&&check.length!=0)
+			return true;
+			else
+			return false;
+		}
+		break;
+		case "name":
+		{  
+			if(/.*[u4e00-u9fa5]+.*$/.test(o.value))  //用正则表达式判断文本框中是否是中文
 			return true;
 			else
 			return false;
@@ -203,6 +214,7 @@ function prepareTip()
  }
 	</script>
 </head>
+<!-- -->
 <body onLoad="prepareTip();">
     <form method="post">
     <div class="header">
@@ -253,11 +265,12 @@ function prepareTip()
                             <input class="txt" type="password" id="password" name=""></div>
                         <div id="passwordtip"></div>
                     </li>
-                    <li>
+                    <li style="position:relative">
                         <label class="ultit">
                             姓&nbsp&nbsp&nbsp&nbsp名：</label>
                         <div class="input">
-                            <input class="txt" type="text" name="txtname"></div>
+                            <input class="txt" type="text" id="name" name=""></div>
+                        <div id="nametip"></div>
                     </li>
                     <li>
                         <label class="ultit">
@@ -357,7 +370,7 @@ function prepareTip()
                             居&nbsp住&nbsp地：</label>
                         <div id="address">
                             <select id="address_select" name="address">
-                                <option value="jinan">济南</option>
+                               <option value="jinan">济南</option> 
                             </select></div>
                     </li>
                     <li>

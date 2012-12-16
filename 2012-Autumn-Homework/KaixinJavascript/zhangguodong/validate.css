@@ -17,8 +17,9 @@ width: 178px;
 	position:absolute;
 	left:67px;
 	top:26px;
-	background-color:#ffffff;
+	background-color:#FFFFFF;
 	display:none;
+	z-index:3;
 }
 .manyemail
 {
