@@ -8,19 +8,23 @@
     <meta name="Description" content="">
     <link rel="stylesheet" href="css/main.css" type="text/css"></link>
     <link rel="stylesheet" href="validate.css" type="text/css"></link>
+
     <script>
-	window.addEvent =function(element,event,fn){   //fn表示函数名  
+	 //fn表示函数名  
+	window.addEvent =function(element,event,fn){  
   if(element.addEventListener)
   {
 	  element.addEventListener(event,fn,false);
 	  
   }
   else if(element.attachEvent){
-     element.attachEvent("on"+event, function(){ fn.call(element) });//第一个参数是onclick”,”onload”等等，第二个参数是具体的事件函数
+	  //第一个参数是onclick”,”onload”等等，第二个参数是具体的事件函数
+     element.attachEvent("on"+event, function(){ fn.call(element) });
      
    }
 }
-function tip(title,isInfo,id)   //isinfo表示文本框中的内容是否错误,即：显示时是否带叹号图片
+ //isinfo表示文本框中的内容是否错误,即：显示时是否带叹号图片
+function tip(title,isInfo,id)  
 {
   this.title=title;
   this.isInfo=isInfo;
@@ -84,8 +88,36 @@ function prepareTip()
 	var p=document.getElementById("password");
 	window.addEvent(p,'blur',blurFn);
 	window.addEvent(p,'focus',focusFn);
+	//给选择城市绑定事件
+	var citytext=document.getElementById("city");
+	window.addEvent(citytext,'click',showcity);
+	var closebutton=document.getElementById("closecity");
+	window.addEvent(closebutton,'click',hidecity);
+    //给所有的城市绑定事件
+	for(j=1;j<36;j++)
+	{
+		var selectcity=document.getElementById("city"+j);
+	    window.addEvent(selectcity,'click',writeOnCity);
+	}
  }
- 
+ function writeOnCity()
+ {
+	 var citytext=document.getElementById("city");
+	 citytext.value=this.firstChild.nodeValue;
+	 hidecity();
+	 var image=document.getElementById("rightimgcity");
+	 image.style.display="inline";
+ }
+ function showcity()
+ {
+	 var citydiv=document.getElementById("selctcity");
+	 citydiv.style.display="block";
+ }
+ function hidecity()
+ {
+	 var citydiv=document.getElementById("selctcity");
+	 citydiv.style.display="none";
+ }
  function autoemailshow()
  {
 	
@@ -103,7 +135,8 @@ function prepareTip()
      var emailtext=document.getElementById("email");
      emailtext.value=this.innerHTML;
 	 var emailtip=document.getElementById("emailtip");
-	 emailtip.style.display="none";      //点击补全邮箱后，需要把文本错误的提示框隐藏！！
+	  //点击补全邮箱后，需要把文本错误的提示框隐藏！！
+	 emailtip.style.display="none";     
  }
  function mailmouseover()
  {
@@ -238,8 +271,8 @@ function prepareTip()
 		}
 		break;
 		case "name":
-		{  
-			if(/.*[u4e00-u9fa5]+.*$/.test(o.value))  //用正则表达式判断文本框中是否是中文
+		{   //用正则表达式判断文本框中是否是中文
+			if(/.*[u4e00-u9fa5]+.*$/.test(o.value)) 
 			return true;
 			else
 			return false;
@@ -265,9 +298,10 @@ function prepareTip()
 	var t=new tip(title,true,this.id+"tip");
 	t.showTip();
  }
-	</script>
+    </script>
+
 </head>
-<body onLoad="prepareTip();">
+<body onload="prepareTip();">
     <form method="post">
     <div class="header">
         <div class="header_pic">
@@ -287,45 +321,58 @@ function prepareTip()
             </div>
             <div>
                 <ul>
-                    <li style="position:relative">
+                    <li style="position: relative">
                         <label class="ultit">
                             电子邮箱：</label>
                         <div class="input">
                             <input class="txt" type="text" id="email" name="" />
                             <img id="rightimgemail" class="rightStyle" src="images/right.gif" alt="正确"></div>
                         <div id="autoemail" class="autoemailstyle">
-                             <div class="manyemail">请选择邮箱的类型</div>
-                             <div id="mail1" class="manyemail">@qq.com</div>
-                             <div id="mail2" class="manyemail">@126.com</div>
-                             <div id="mail3" class="manyemail">@163.com</div>
-                             <div id="mail4" class="manyemail">@sina.com</div>
-                             <div id="mail5" class="manyemail">@sina.cn</div>
-                             <div id="mail6" class="manyemail">@hotmail.com</div>
-                             <div id="mail7" class="manyemail">@gmail.com</div>
-                             <div id="mail8" class="manyemail">@sohu.cn</div>
-                             <div id="mail9" class="manyemail">@yahoo.cn</div>
-                             <div id="mail10" class="manyemail">@139.cn</div>
+                            <div class="manyemail">
+                                请选择邮箱的类型</div>
+                            <div id="mail1" class="manyemail">
+                                @qq.com</div>
+                            <div id="mail2" class="manyemail">
+                                @126.com</div>
+                            <div id="mail3" class="manyemail">
+                                @163.com</div>
+                            <div id="mail4" class="manyemail">
+                                @sina.com</div>
+                            <div id="mail5" class="manyemail">
+                                @sina.cn</div>
+                            <div id="mail6" class="manyemail">
+                                @hotmail.com</div>
+                            <div id="mail7" class="manyemail">
+                                @gmail.com</div>
+                            <div id="mail8" class="manyemail">
+                                @sohu.cn</div>
+                            <div id="mail9" class="manyemail">
+                                @yahoo.cn</div>
+                            <div id="mail10" class="manyemail">
+                                @139.cn</div>
                         </div>
                         <div id="emailtip">
                         </div>
-                  <div class="note">
+                        <div class="note">
                             如果没有邮箱，你可以用<a href="#">账号注册</a></div>
                     </li>
-                    <li style="position:relative">
+                    <li style="position: relative">
                         <label class="ultit">
                             创建密码：</label>
                         <div class="input">
                             <input class="txt" type="password" id="password" name="">
                             <img id="rightimgpassword" class="rightStyle" src="images/right.gif" alt="正确"></div>
-                        <div id="passwordtip"></div>
+                        <div id="passwordtip">
+                        </div>
                     </li>
-                    <li style="position:relative">
+                    <li style="position: relative">
                         <label class="ultit">
                             姓&nbsp&nbsp&nbsp&nbsp名：</label>
                         <div class="input">
                             <input class="txt" type="text" id="name" name="">
                             <img id="rightimgname" class="rightStyle" src="images/right.gif" alt="正确"></div>
-                        <div id="nametip"></div>
+                        <div id="nametip">
+                        </div>
                     </li>
                     <li>
                         <label class="ultit">
@@ -420,13 +467,54 @@ function prepareTip()
                             <input type="radio" value="work" name="job" />&nbsp在工作&nbsp &nbsp &nbsp<input type="radio"
                                 value="school">&nbsp在上学</div>
                     </li>
-                    <li>
+                    <li style="position: relative">
                         <label class="ultit">
-                            居&nbsp住&nbsp地：</label>
+                            居&nbsp住&nbsp地：
+                        </label>
                         <div id="address">
-                            <select id="address_select" name="address">
-                               <option value="jinan">济南</option> 
-                            </select></div>
+                            <input type="text" class="cityStyle" value="济南" id="city" name=""></input>
+                            <img id="rightimgcity" class="rightStyle" src="images/right.gif" alt="正确">
+                        </div>
+                        <div class="cityBg" id="selctcity">
+                            <div id="provincebox" class="cbox">
+                                <span><a class="sl2" id="city1">北京 </a></span>
+                                <span><a class="sl2" id="city2">上海 </a></span>
+                                <span><a class="sl2" id="city3">天津 </a></span>
+                                <span><a class="sl2" id="city4">重庆 </a></span>
+                                <span><a class="sl2" id="city5">黑龙江 </a></span>
+                                <span><a class="sl2" id="city6">吉林 </a></span>
+                                <span><a class="sl2" id="city7">辽宁 </a></span>
+                                <span><a class="sl2" id="city8">山东 </a></span>
+                                <span><a class="sl2" id="city9">山西 </a></span>
+                                <span><a class="sl2" id="city10">陕西 </a></span>
+                                <span><a class="sl2" id="city11">河北 </a></span>
+                                <span><a class="sl2" id="city12">河南 </a></span>
+                                <span><a class="sl2" id="city13">湖北 </a></span>
+                                <span><a class="sl2" id="city14">湖南 </a></span>
+                                <span><a class="sl2" id="city15">海南 </a></span>
+                                <span><a class="sl2" id="city16">江苏 </a></span>
+                                <span><a class="sl2" id="city17">江西 </a></span>
+                                <span><a class="sl2" id="city18">广东 </a></span>
+                                <span><a class="sl2" id="city19">广西 </a></span>
+                                <span><a class="sl2" id="city20">云南 </a></span>
+                                <span><a class="sl2" id="city21">贵州 </a></span>
+                                <span><a class="sl2" id="city22">四川 </a></span>
+                                <span><a class="sl2" id="city23">内蒙古 </a></span>
+                                <span><a class="sl2" id="city24">宁夏 </a></span>
+                                <span><a class="sl2" id="city25">甘肃 </a></span>
+                                <span><a class="sl2" id="city26">青海 </a></span>
+                                <span><a class="sl2" id="city27">西藏 </a></span>
+                                <span><a class="sl2" id="city28">新疆 </a></span>
+                                <span><a class="sl2" id="city29">安徽</a></span>
+                                <span><a class="sl2" id="city30">浙江 </a></span>
+                                <span><a class="sl2" id="city31">福建 </a></span>
+                                <span><a class="sl2" id="city32">香港 </a></span>
+                                <span><a class="sl2" id="city33">台湾 </a></span>
+                                <span><a class="sl2" id="city34">澳门 </a></span>
+                                <span><a class="sl2" id="city35">海外 </a></span>
+                            </div>
+                            <input type="button" class="closebutton" value="关闭" id="closecity" />
+                        </div>
                     </li>
                     <li>
                         <div id="agree">
