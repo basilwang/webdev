@@ -37,11 +37,18 @@ tip.prototype=(function()
 	//生成合适的Tip的内部函数
     function genTip(tipDomObject,title,isInfo)
 	{
-     tipDomObject.className="tipFormat";     //该对象的css为tipFormat
      if(isInfo===false)
-      tipDomObject.innerHTML="<img src='images/error.gif' /><span>"  + title + "</span>";
+	 {
+      tipDomObject.innerHTML="<img src='images/error.gif' style='margin-top:-6px;'/><span>"  + title + "</span>";
+	  //当文本框中的内容错误时修改tip的背景色和文字颜色
+	 tipDomObject.className="tipFormatFalse";
+	 }
 	 else
+	 {
+		  //该对象的css为tipFormat
+	  tipDomObject.className="tipFormatTrue";    
 	  tipDomObject.innerHTML="<span>"+title+"</span>";
+	 }
 	}
 	//王华杰 不能在此处应用this
 	//alert(this.title+" in closure");
@@ -208,13 +215,13 @@ function prepareTip()
 	switch(this.id)
 	{
 	  case "email":
-		   title="邮箱格式不对";
+		   title="抱歉暂不支持改后缀的邮箱注册";
 		   break;
 	  case "password":
-		   title="密码不对";
+		   title="密码应该由6-20个字母、数字或特殊字符组成";
 		   break;
 	  case "name":
-		   title="姓名不符合要求";
+		   title="请填写你的真实中文姓名";
 		   break;
 	}
 	var t=new tip(title,false,this.id+"tip");
@@ -325,13 +332,13 @@ function prepareTip()
 	switch(this.id)
 	{
 	  case "email":
-		   title="请输入邮箱";
+		   title="请填写有效电子邮箱，推荐使用<span style='color:rgb(211, 37, 3);'>QQ邮箱</span>";
 		   break;
 	  case "password":
-		   title="请输入密码";
+		   title="由6-20个字母、数字或特殊字符组成";
 		   break;
 	  case "name":
-		   title="请输入姓名";
+		   title="请填写你的真实中文姓名";
 		   break;
 	}
 	var t=new tip(title,true,this.id+"tip");

@@ -1,8 +1,22 @@
-.tipFormat {
+.tipFormatTrue {
 padding: 2px 6px;
-color: #333;
-background-color: #FFFFCD;
-border: 1px solid #DBDBDB;
+color:rgb(153, 153, 153);
+background-color: rgb(249, 249, 249);
+border: 1px solid rgb(221, 221, 221);
+font-family: Arial;
+font-size: 12px;
+position: absolute;
+left: 300px;
+top: 0;
+width: 178px;
+}
+.tipFormatFalse {
+padding: 2px 6px;
+color:rgb(221, 75, 57);
+background-color:rgb(255, 229, 229);
+border: 1px solid rgb(255, 183, 183);
+font-family: Arial;
+font-size: 12px;
 position: absolute;
 left: 300px;
 top: 0;
