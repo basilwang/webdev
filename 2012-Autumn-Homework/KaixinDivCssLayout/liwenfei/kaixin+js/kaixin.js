@@ -12,7 +12,7 @@ window.addEvent =function(element,event,fn){
 function prepareTip()
  {
 	var e=document.getElementById("email");
-	window.addEvent (e,'keyup',keyupFn);
+	window.addEvent (e,'input',inputFn);
 	window.addEvent(e,'blur',blurFn);
 	window.addEvent(e,'focus',focusFn);
 	var n=document.getElementById("name");
@@ -157,7 +157,7 @@ tip.prototype=(function()
 })();
  function blurFn()
  {
-    //var mtype=document .getElementById ("mail_type");
+    var mtype=document .getElementById ("mail_type");
 	var title;
 	switch(this.id)
 	{
@@ -174,6 +174,10 @@ tip.prototype=(function()
 	}
 	var t=new tip(title,false,this.id+"tip");
 	//先关闭原来的info tip
+	if(title=="请填写有效地电子邮箱")
+	 {
+		mtype.style.display="none";
+	 }
 	if(this.value=="")
 	 {
 		t.hideTip();
@@ -243,7 +247,7 @@ tip.prototype=(function()
 	var t=new tip(title,true,this.id+"tip");
 	t.showTip();
  }
- function keyupFn()//邮箱提示
+ function inputFn()//邮箱提示
  {
     var mtype=document .getElementById ("mail_type");
     mtype.style.display="block";
