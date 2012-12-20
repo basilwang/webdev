@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 开心网 </title>
+  <link rel = "Shortcut Icon" href="3.ico">
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+ </head>
+    <style>
+	  @import url(kaixin.css)
+	</style>
+	 <script type="text/javascript" src="jquery-1.8.3.js"></script>
+	 <script type="text/javascript" src="kaixin.js" ></script>
+ <body onload="prepareTip();">
+    <div id="head">
+	   <div id="head_content">
+	     <span class="left"><a href="http://www.kaixin001.com"><img src="../picture/kaixin.jpg"></a></span>
+		 <span class="right"><a href="http://www.kaixin001.com">注册</a>
+		 &nbsp<a href="http://www.kaixin001.com">帮助</a>
+		 &nbsp<a href="http://www.kaixin001.com">登录</a>
+		 &nbsp</span><div id="daohang"><a href="http://www.kaixin001.com">导航</a></div>
+		 <div id="navigate">
+		 <div id="navigate_left">
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href="" class="href">手机版</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">转帖</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">投票</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">记录</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">专题</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">团购</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">小游戏</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">公共主页</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">动物王国</a></div>
+		 </div>
+		 <div id="navigate_right">
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">照片</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">评比</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">电影</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">视频</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">开心集品</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">网页游戏</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">社交游戏</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">美刻</a></div>
+		 <div class="navigate">&nbsp&nbsp&nbsp<a href=""class="href">名品折扣</a></div>
+		 </div>
+		 </div>
+		 </div>
+	</div>
+	<div id="content">
+	  <div id="content_left">
+	    <div id="title"></div>
+		<form>
+		   <div id="mail">电子邮箱：<input type="textbox" class="textbox" id="email"><div id="emailtip" ></div></div>
+		   <div id="mail_type"><div class="mtype" id="qq">@qq.com</div><div class="mtype" id="126">@126.com</div>
+		   <div class="mtype" id="163">@163.com</div><div class="mtype" id="sina">@sina.com</div>
+		   <div class="mtype" id="sina1">@sina.cn</div><div class="mtype" id="hotmail">@hotmail.com</div>
+		   <div class="mtype" id="gmail">@gmail.com</div><div class="mtype" id="sohu">@sohu.cn</div>
+		   <div class="mtype" id="yahoo">@yahoo.cn</div><div class="mtype" id="139">@139.cn</div></div>
+		   <div id="mail_1">如果没有邮箱，你可以使用<a href="http://www.kaixin001.com">账号注册</a></div>
+		   <div class="login">创建密码：<input type="password" class="textbox" id="password"><div id="passwordtip" ></div></div>
+		   <div class="login">姓&nbsp&nbsp&nbsp&nbsp名：<input type="textbox" class="textbox" id="name"><div id="nametip" ></div></div>
+		   <div class="login">姓&nbsp&nbsp&nbsp&nbsp别：<input type="radio" id="sex1" name="t1">男&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="radio" id="sex2" name="t1">女<div id="sex1tip" ></div><div id="sex2tip" ></div></div>
+           <div class="login">生&nbsp&nbsp&nbsp&nbsp日：<select id="select_y">
+	                             <option selected="selected" value="请选择">请选择
+								 <option value="2001">2001
+								 <option>2002
+								 <option>2003
+								 <option>2004
+								 <option>2005
+								 <option>2005
+								 <option>2006
+								 <option>2007
+								 </select>年
+								 <select id="select_m">
+								 <option selected="selectde" value="--">--
+								 <option value="01">01
+								 <option>02
+								 <option>03
+								 <option>04
+								 <option>05
+								 <option>06
+								 <option>07
+								 <option>08
+								 <option>09
+								 <option>10
+								 </select>月
+								 <select id="select_d">
+								 <option selected="selected" >--
+								 <option>01
+								 <option>02
+								 <option>03
+								 <option>04
+								 <option>05
+								 <option>06
+								 <option>07
+								 <option>08
+								 </select>日<div id="select_dtip" ></div></div>
+			 <div class="login">我&nbsp现&nbsp在：<input type="radio" id="state1" name="t3">在工作&nbsp&nbsp&nbsp&nbsp<input type="radio" id="state2" name="t3">在学习<div id="state1tip" ></div><div id="state2tip" ></div></div>
+             <div class="adresslogin">居&nbsp住&nbsp地：<input width=100 type="job" id="adress_text"><div id="adress_texttip" ></div></div>
+			 <div class="hometown" id="hometown">
+			   <div>
+			    <img src="../picture/top.gif">
+			   </div>
+			    <div id="adress">
+			      <div id="adressbox"><span class="dizhi" id="beijing">北京</span><span class="dizhi" id="shanghai">上海</span><span class="dizhi" id="tianjin">天津</span><span class="dizhi" id="chongqing">重庆</span><span class="dizhi" id="hei">黑龙江</span><span class="dizhi" id="ji">吉林</span><span class="dizhi" id="liao">辽宁</span><span class="dizhi" id="lu">山东</span><span class="dizhi" id="jin">山西</span><span class="dizhi" id="shan">陕西</span><span class="dizhi" id="hebei">河北</span><span class="dizhi" id="yu">河南</span><span class="dizhi" id="hubei">湖北</span><span class="dizhi" id="xiang">湖南</span><span class="dizhi" id="qiong">海南</span><span class="dizhi" id="su">江苏</span><span class="dizhi" id="jiangxi">江西</span><span class="dizhi" id="guangdong">广东</span><span class="dizhi" id="guangxi">广西</span><span class="dizhi" id="yunnan">云南</span><span class="dizhi" id="guizhou">贵州</span><span class="dizhi" id="sichuan">四川</span><span class="dizhi" id="neimenggu">内蒙古</span></div>
+				  <div id="adressbut"><input type="button" value="关闭" id="guanbi"></div>
+			   </div>
+			    <div>
+			    <img src="../picture/bot.gif">
+			   </div>
+			 </div>
+			 <div id="agree"><input type="checkbox" id="tongyi">同意开心网服务条款<div id="tongyitip" ></div></div>
+			 <div id="sub"><input id="submit" type="submit" value="立即注册"></div>
+		</form>
+	  </div>
+	  <div id="content_right">
+	     <div id="content_right01"> <font size="4px" face="黑体">已是开心网用户？<a href="http://www.kaixin001.com">直接登录</a></font></div>
+		 <div id="content_right02"> 使用合作网站账号登陆</div>
+		 <div id="content_right03">
+		  <a href="http://qq.com"><img src="../picture/1.jpg"></a>&nbsp
+		  <a href="http://baidu.com"><img src="../picture/2.jpg"></a>&nbsp
+		  <a href="http://baidu.com"><img src="../picture/4.jpg"></a>
+		 </div>
+		 <div id="content_right04">
+		    
+		 </div>
+	  </div>
+	  <div id="bottom">
+	     <div id="bottom01"><span class="left"><a href="http://www.kaixin001.com">关于我们&nbsp手机中心&nbsp开放平台&nbsp应用中心&nbsp自助广告&nbsp开心招聘&nbsp客服&nbsp帮助</a></span><span>@2012开心网</span>
+		 </div>
+		 <div id="bottom02">
+		 北京开心人信息技术有限公司：文网文[2009]157号（甲）.京ICP证080482号.京公网安备1100003号.（京）-非经营性-2009-0009.未成年家长监护
+		 </div>
+	  </div>
+	</div>
+ </body>
+</html>
