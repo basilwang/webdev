@@ -11,7 +11,7 @@ window.addEvent =function(element,event,fn){
 }
 function prepareTip()
  {
-	var e=document.getElementById("email");
+    var e=document.getElementById("email");
 	window.addEvent (e,'input',inputFn);
 	window.addEvent(e,'blur',blurFn);
 	window.addEvent(e,'focus',focusFn);
@@ -91,10 +91,14 @@ function prepareTip()
     window .addEvent (a23,'click',hclick); 
     var guan=document .getElementById ("guanbi");
     window .addEvent (guan,'click',gclick); 
-	var sex=document .getElementById("sex");
-	window.addEvent(sex,'click',sclick);
-	var state=document .getElementById("state");
-	window.addEvent(state,'click',sclick);
+	var sex1=document .getElementById("sex1");
+	window.addEvent(sex1,'click',sclick);
+	var sex2=document .getElementById("sex2");
+	window.addEvent(sex2,'click',sclick);
+	var state1=document .getElementById("state1");
+	window.addEvent(state1,'click',sclick);
+	var state2=document .getElementById("state2");
+	window.addEvent(state2,'click',sclick);
 	var tongyi=document .getElementById("tongyi");
 	window.addEvent(tongyi,'click',sclick);
 	var d=document.getElementById("select_d");
@@ -174,10 +178,6 @@ tip.prototype=(function()
 	}
 	var t=new tip(title,false,this.id+"tip");
 	//先关闭原来的info tip
-	if(title=="请填写有效地电子邮箱")
-	 {
-		mtype.style.display="none";
-	 }
 	if(this.value=="")
 	 {
 		t.hideTip();
@@ -306,7 +306,7 @@ tip.prototype=(function()
  }
  function sclick()
  {
-	 var t=new tip(title,false,this.id+"tip");
+	 var t=new tip("",false,this.id+"tip");
 	 t.showTip2();
  }
  function schange()//年月日
