@@ -1,0 +1,142 @@
+.tipFormatTrue {
+padding: 2px 6px;
+color:rgb(153, 153, 153);
+background-color: rgb(249, 249, 249);
+border: 1px solid rgb(221, 221, 221);
+font-family: Arial;
+font-size: 12px;
+position: absolute;
+left: 300px;
+top: 0;
+width: 178px;
+}
+.tipFormatFalse {
+padding: 2px 6px;
+color:rgb(221, 75, 57);
+background-color:rgb(255, 229, 229);
+border: 1px solid rgb(255, 183, 183);
+font-family: Arial;
+font-size: 12px;
+position: absolute;
+left: 300px;
+top: 0;
+width: 178px;
+}
+.autoemailstyle
+{
+	width:230px;
+	height:210px;
+	border:1px solid black;
+	float:right;
+	position:absolute;
+	left:67px;
+	top:26px;
+	background-color:#FFFFFF;
+	display:none;
+	z-index:3;
+}
+.manyemail
+{
+	font-size:12px;
+	color: rgb(153, 153, 153);
+    font-family: Arial;
+	height:19px;
+	cursor: pointer;
+}
+.rightStyle
+{
+	position:absolute;
+	left:305px;
+	top:5px;
+    display:none;
+}
+.cityStyle
+{
+	border-style: solid;
+    border-color: #BBBBBB;
+    border-width: 1px;
+    height: 25px;
+    width: 150px;
+	cursor:pointer;
+}
+.cityBg
+{
+	border: 1px solid rgb(201, 201, 201);
+	width:430px;
+	height:150px;
+	background-color:rgb(247, 247, 247);
+	position:absolute;
+	left:57px;
+	top:32px;
+	display:none;
+}
+.cbox
+{
+	border:1px solid rgb(200,200,200);
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 94, 172);
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 21.6px;
+	margin-top:17px;
+	margin-left:17px;
+	margin-right:17px;
+	cursor:pointer;
+	height:90px;
+}
+.sl2
+{
+	color: rgb(51, 102, 153);
+	line-height: 21.6px;
+	margin-left:8px;
+}
+.closebutton
+{
+    background-color: rgb(221, 221, 221);
+	border-width: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255) rgb(106, 106, 106) rgb(106, 106, 106) rgb(255, 255, 255);
+	height:25px;
+	width:35px;
+	cursor:pointer;
+	text-align: center;
+	float:right;
+	margin-right:17px;
+	margin-top:7px;
+}
+.dirdivstyle
+{
+	float:left;
+	width :33px;
+	height:41px;
+}
+.directionstyle
+{
+	border:1px solid rgb(201, 201, 201);
+	width:181px;
+	height:253px;
+	position:absolute;
+	left:-40px;
+	top:42px;
+	display:none;
+	cursor:pointer;
+}
+.leftdir
+{
+	width:90px;
+	height:28px;
+	float:left;
+	background-color:rgb(250,250,250);
+	border-right:1px solid rgb(201, 201, 201);
+	text-align:center;
+	line-height:30px;
+}
+.rightdir
+{
+	width:89px;
+	height:28px;
+	float:right;
+	background-color:rgb(250,250,250);
+	text-align:center;
+	line-height:30px;
+}
